@@ -91,11 +91,14 @@ public class ClientService : IAsyncDisposable
     public async Task<bool> Logout() => await Request(HttpMethod.Post, "users/auth/logout");
     public async Task<RollInfo?> Status() => await Request<RollInfo>(HttpMethod.Get, "cards/roll/status");
     public async Task<CardRollResponse?> Roll() => await Request<CardRollResponse>(HttpMethod.Post, "cards/roll");
+    
     public async Task<Season?> GetSeason(int id) => await Request<Season>(HttpMethod.Get, $"seasons/{id}");
     public async Task<Season?> GetCurrentSeason() => await Request<Season>(HttpMethod.Get, "seasons/active/current");
+    
     public async Task<Deck[]?> GetDecks() => await Request<Deck[]>(HttpMethod.Get, "seasons/decks");
     public async Task<Card[]?> GetDeckCards(int deckId) => await Request<Card[]>(HttpMethod.Get, $"seasons/decks/{deckId}/cards");
     public async Task DeleteDeckCard(int deckId, int id) => await Request(HttpMethod.Delete, $"seasons/decks/{deckId}/cards/{id}");
+    
     public async Task<Exchange[]?> GetExchanges() => await Request<Exchange[]>(HttpMethod.Get, "exchange");
     public async Task<Candle[]?> GetCandles(int exchangeId, int interval, int limit) => await Request<Candle[]>(HttpMethod.Get, $"exchange/{exchangeId}/candles?interval={interval}m&limit={limit}");
     public async Task<Position[]?> GetPositions()  => await Request<Position[]>(HttpMethod.Get, "exchange/positions");
