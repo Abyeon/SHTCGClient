@@ -24,4 +24,10 @@ public class Companion
     
     [JsonPropertyName("max_rolls_modifier")]
     public double MaxRollsModifier { get; set; }
+    
+    [JsonPropertyName("created_at")]
+    public DateTime? CreatedAt { get; set; }
+    
+    [JsonPropertyName("updated_at")]
+    public DateTime? UpdatedAt { get; set; }
 }

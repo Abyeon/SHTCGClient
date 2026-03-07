@@ -18,4 +18,7 @@ public class RollInfo
 
     [JsonPropertyName("roll_refill_cost")]
     public double RollRefillCost { get; set; }
+
+    [JsonPropertyName("season_card_pack_image_url")]
+    public string SeasonCardPackImageUrl { get; set; } = null!;
 }

@@ -111,6 +111,8 @@ public class ClientService : IAsyncDisposable
     
     public async Task<Vendor[]?> GetVendors() => await Request<Vendor[]>(HttpMethod.Get, "vendors/list");
     public async Task<Companion[]?> GetCompanions() => await Request<Companion[]>(HttpMethod.Get, "companions");
+    public async Task<bool> UnequipCompanion() => await Request(HttpMethod.Post, "companions/unequip");
+    public async Task<Companion?> EquipCompanion(int id) => await Request<Companion>(HttpMethod.Post, $"companions/{id}/equip");
 
     public async Task AddDeckCard(int deckId, int id)
     {
@@ -148,7 +150,7 @@ public class ClientService : IAsyncDisposable
         return cookies.FirstOrDefault(c => c.Name == "csrftoken")?.Value ?? string.Empty;
     }
 
-    private async Task<bool> Request<T>(HttpMethod method, string url, T data)
+    public async Task<bool> Request<T>(HttpMethod method, string url, T data)
     {
         string token = GetCsrf();
         
@@ -166,7 +168,7 @@ public class ClientService : IAsyncDisposable
         return response.IsSuccessStatusCode;
     }
 
-    private async Task<bool> Request(HttpMethod method, string url)
+    public async Task<bool> Request(HttpMethod method, string url)
     {
         string token = GetCsrf();
         var request = new HttpRequestMessage(method, ApiUrl + url);
@@ -180,7 +182,7 @@ public class ClientService : IAsyncDisposable
         return response.IsSuccessStatusCode;
     }
 
-    private async Task<T?> Request<T>(HttpMethod method, string url)
+    public async Task<T?> Request<T>(HttpMethod method, string url)
     {
         string token = GetCsrf();
         var request = new HttpRequestMessage(method, ApiUrl + url);
