@@ -3,8 +3,11 @@ using System.Text;
 using System.Text.Json;
 using SHTCGClient.Models;
 using SHTCGClient.Models.Cards;
+using SHTCGClient.Models.Companions;
 using SHTCGClient.Models.Exchange;
 using SHTCGClient.Models.Seasons;
+using SHTCGClient.Models.Users;
+using SHTCGClient.Models.Vendors;
 
 namespace SHTCGClient;
 
@@ -92,8 +95,11 @@ public class ClientService : IAsyncDisposable
     public async Task<RollInfo?> Status() => await Request<RollInfo>(HttpMethod.Get, "cards/roll/status");
     public async Task<CardRollResponse?> Roll() => await Request<CardRollResponse>(HttpMethod.Post, "cards/roll");
     
+    public async Task<User[]?> SearchForUser(string name) => await Request<User[]>(HttpMethod.Get, $"users/users?search={name}");
+    
     public async Task<Season?> GetSeason(int id) => await Request<Season>(HttpMethod.Get, $"seasons/{id}");
     public async Task<Season?> GetCurrentSeason() => await Request<Season>(HttpMethod.Get, "seasons/active/current");
+    public async Task<Deck[]?> GetLeaderboard() => await Request<Deck[]>(HttpMethod.Get, "seasons/decks/leaderboard");
     
     public async Task<Deck[]?> GetDecks() => await Request<Deck[]>(HttpMethod.Get, "seasons/decks");
     public async Task<Card[]?> GetDeckCards(int deckId) => await Request<Card[]>(HttpMethod.Get, $"seasons/decks/{deckId}/cards");
@@ -101,7 +107,10 @@ public class ClientService : IAsyncDisposable
     
     public async Task<Exchange[]?> GetExchanges() => await Request<Exchange[]>(HttpMethod.Get, "exchange");
     public async Task<Candle[]?> GetCandles(int exchangeId, int interval, int limit) => await Request<Candle[]>(HttpMethod.Get, $"exchange/{exchangeId}/candles?interval={interval}m&limit={limit}");
-    public async Task<Position[]?> GetPositions()  => await Request<Position[]>(HttpMethod.Get, "exchange/positions");
+    public async Task<Position[]?> GetPositions() => await Request<Position[]>(HttpMethod.Get, "exchange/positions");
+    
+    public async Task<Vendor[]?> GetVendors() => await Request<Vendor[]>(HttpMethod.Get, "vendors/list");
+    public async Task<Companion[]?> GetCompanions() => await Request<Companion[]>(HttpMethod.Get, "companions");
 
     public async Task AddDeckCard(int deckId, int id)
     {
@@ -186,8 +195,10 @@ public class ClientService : IAsyncDisposable
         {
             throw new Exception(response.Content.ReadAsStringAsync().Result);
         }
-            
+        
         string json = await response.Content.ReadAsStringAsync();
+        
+        // Console.WriteLine(json);
         return JsonSerializer.Deserialize<T>(json);
     }
 

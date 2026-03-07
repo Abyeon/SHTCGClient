@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using SHTCGClient.Models.Users;
 
 namespace SHTCGClient.Models.Seasons;
 
@@ -33,4 +34,7 @@ public class Deck
     
     [JsonPropertyName("card_count")]
     public int CardCount { get; set; }
+    
+    [JsonPropertyName("owner")]
+    public Profile? Owner { get; set; }
 }
