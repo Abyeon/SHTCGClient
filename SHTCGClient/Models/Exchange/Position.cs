@@ -5,35 +5,35 @@ namespace SHTCGClient.Models.Exchange;
 public class Position
 {
     [JsonPropertyName("quantity")]
-    public int Quantity { get; set; }
+    public int Quantity { get; init; }
     
     [JsonPropertyName("avg_cost")]
     [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
-    public double AvgCost { get; set; }
+    public double AvgCost { get; init; }
     
     [JsonPropertyName("market_price")]
     [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
-    public double MarketPrice { get; set; }
+    public double MarketPrice { get; init; }
     
     [JsonPropertyName("cost_basis")]
     [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
-    public double CostBasis { get; set; }
+    public double CostBasis { get; init; }
     
     [JsonPropertyName("market_value")]
     [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
-    public double MarketValue { get; set; }
+    public double MarketValue { get; init; }
     
     [JsonPropertyName("unrealized_pnl")]
     [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
-    public double UnrealizedPnl { get; set; }
+    public double UnrealizedPnl { get; init; }
     
     [JsonPropertyName("unrealized_pnl_pct")]
     [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
-    public double UnrealizedPnlPercentage { get; set; }
+    public double UnrealizedPnlPercentage { get; init; }
     
     [JsonPropertyName("market_id")]
-    public int MarketId { get; set; }
+    public int MarketId { get; init; }
 
     [JsonPropertyName("symbol")]
-    public string Symbol { get; set; } = null!;
+    public string Symbol { get; init; } = null!;
 }
