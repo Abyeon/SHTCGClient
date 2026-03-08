@@ -28,7 +28,7 @@ Task.Delay(-1);
 var rollInfo = await client.Status();
 if (rollInfo == null)
 {
-    Console.Writeline("Get status failed!");
+    Console.WriteLine("Get status failed!");
     return;
 }
 
@@ -38,7 +38,7 @@ if (rollInfo.RollsAvailable > 0)
     var roll = await client.Roll();
     if (roll != null)
     {
-        Console.Writeline($"You rolled a {roll.Card.Name}!\nValue: ${roll.Card.EstimatedValue:F}")
+        Console.WriteLine($"You rolled a {roll.Card.Name}!\nValue: ${roll.Card.EstimatedValue:F}")
     }
 }
 ```
