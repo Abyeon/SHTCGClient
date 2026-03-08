@@ -24,7 +24,7 @@ public class ClientService : IAsyncDisposable
     public readonly HttpClient Client;
     public readonly ThrottledProcessor Processor;
 
-    public bool LoggedIn = false;
+    public bool LoggedIn;
     
     private const string ApiUrl = "https://api.tcg.robswc.me/api/";
     
@@ -76,6 +76,7 @@ public class ClientService : IAsyncDisposable
         return response.IsSuccessStatusCode;
     }
 
+    public async Task<bool> Login(string username, string password) => await Login(new Credentials {Username = username, Password = password});
     public async Task<bool> Login(Credentials credentials)
     {
         var loginData = new 
@@ -208,11 +209,11 @@ public class ClientService : IAsyncDisposable
 
     public async ValueTask DisposeAsync()
     {
-        bool success = await Logout();
-        LoggedIn = success;
+        if (LoggedIn) LoggedIn = await Logout();
         
         await CastAndDispose(Handler);
         await CastAndDispose(Client);
+        await CastAndDispose(Processor);
         
         GC.SuppressFinalize(this);
         return;
