@@ -36,4 +36,13 @@ public class Exchange
     [JsonPropertyName("low_24h")]
     [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     public double Low24Hours { get; init; }
+
+    /// <summary>
+    /// Get the candle graph for this exchange
+    /// </summary>
+    /// <param name="client">Your client</param>
+    /// <param name="interval">Every x minutes for candles</param>
+    /// <param name="limit">Limit how many candles you get</param>
+    /// <returns></returns>
+    public async Task<Candle[]?> GetCandles(ClientService client, int interval = 5, int limit = 288) => await client.GetCandles(Id, interval, limit);
 }

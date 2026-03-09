@@ -20,7 +20,7 @@ public class User : IEquatable<User>
     public DateTime DateJoined { get; init; }
     
     [JsonPropertyName("net_worth")]
-    public double NetWorth { get; init; }
+    public double? NetWorth { get; init; }
 
     public bool Equals(User? other)
     {

@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using SHTCGClient.Models.Cards;
 
 namespace SHTCGClient.Models.Companions;
 
@@ -30,6 +31,13 @@ public class Companion : IEquatable<Companion>
     
     [JsonPropertyName("updated_at")]
     public DateTime? UpdatedAt { get; init; }
+
+    /// <summary>
+    /// Equips this companion
+    /// </summary>
+    /// <param name="client">Your client</param>
+    /// <returns>The equipped companion (this).</returns>
+    public async Task<Companion?> Equip(ClientService client) => await client.EquipCompanion(Id);
 
     public bool Equals(Companion? other)
     {

@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using SHTCGClient.Models.Cards;
 using SHTCGClient.Models.Users;
 
 namespace SHTCGClient.Models.Seasons;
@@ -37,6 +38,40 @@ public class Deck : IEquatable<Deck>
     
     [JsonPropertyName("owner")]
     public Profile? Owner { get; init; }
+
+    /// <summary>
+    /// Removes a card from the deck
+    /// </summary>
+    /// <param name="client">Your client</param>
+    /// <param name="cardId">ID of the card to remove</param>
+    public async Task Remove(ClientService client, int cardId)
+    {
+        await client.DeleteDeckCard(Id, cardId);
+    }
+    
+    /// <summary>
+    /// Removes a card from the deck
+    /// </summary>
+    /// <param name="client">Your client</param>
+    /// <param name="card">Card to remove</param>
+    public async Task Remove(ClientService client, Card card) => await Remove(client, card.Id);
+
+    /// <summary>
+    /// Adds a card to the deck
+    /// </summary>
+    /// <param name="client">Your client</param>
+    /// <param name="cardId">ID of the card to add</param>
+    public async Task Add(ClientService client, int cardId)
+    {
+        await client.AddDeckCard(Id, cardId);
+    }
+    
+    /// <summary>
+    /// Adds a card to the deck
+    /// </summary>
+    /// <param name="client">Your client</param>
+    /// <param name="card">Card to add</param>
+    public async Task Add(ClientService client, Card card) => await Add(client, card.Id);
 
     public bool Equals(Deck? other)
     {
