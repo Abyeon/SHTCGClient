@@ -36,7 +36,7 @@ jobs:
 
       # 4. Build the project from the main-repo folder
       - name: Build Project
-        run: dotnet build ./main-repo/SHTCGClient/SHTCGClient.csproj --configuration Release -p:GenerateDocumentationFile=true
+        run: dotnet build ./main-repo/SHTCGClient/SHTCGClient.csproj --configuration Release -p:GenerateDocumentationFile=true -p:RemoveFileExtensionFromUrl=true
 
       # 5. Install the markdown generator tool
       - name: Install DefaultDocumentation
