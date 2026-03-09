@@ -24,21 +24,21 @@ jobs:
         with:
           repository: ${{ github.repository }}.wiki
           path: ./wiki
-
+          
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x' 
-          
+
       - name: Build Project
         run: dotnet build ./main-repo/SHTCGClient/SHTCGClient.csproj --configuration Release -p:GenerateDocumentationFile=true
 
-      - name: Install XMLDoc2Markdown
-        run: dotnet tool install -g XMLDoc2Markdown
-        
-      - name: Generate Docs
-        run: xmldoc2md ./main-repo/SHTCGClient/bin/Release/net10.0/SHTCGClient.dll -o ./wiki --github-pages
+      - name: Install DefaultDocumentation
+        run: dotnet tool install -g DefaultDocumentation.Console
 
+      - name: Generate Docs
+        run: defaultdocumentation --AssemblyFilePath ./main-repo/SHTCGClient/bin/Release/net10.0/SHTCGClient.dll --OutputDirectoryPath ./wiki --RemoveFileExtensionFromLinks
+        
       - name: Commit and Push to Wiki
         run: |
           cd ./wiki
