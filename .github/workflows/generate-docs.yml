@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch: 
 
 # Give the action permission to commit to repositories
 permissions:
