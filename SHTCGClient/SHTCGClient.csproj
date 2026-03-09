@@ -7,7 +7,7 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <DefaultDocumentationFolder>Docs</DefaultDocumentationFolder>
         <DefaultDocumentationIncludeUndocumentedItems>true</DefaultDocumentationIncludeUndocumentedItems>
-        <DefaultDocumentationGeneratedPages>Assembly,Types,Members</DefaultDocumentationGeneratedPages>
+        <DefaultDocumentationGeneratedPages>Assembly,Types</DefaultDocumentationGeneratedPages>
         <DefaultDocumentationGeneratedAccessModifiers>Public,Api</DefaultDocumentationGeneratedAccessModifiers>
     </PropertyGroup>
 

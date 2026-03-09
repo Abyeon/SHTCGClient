@@ -8,12 +8,70 @@ public class Candle
 ```
 
 Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object') &#129106; Candle
+### Properties
 
-| Properties | |
-| :--- | :--- |
-| [Close](SHTCGClient.Models.Exchange.Candle.Close.md 'SHTCGClient\.Models\.Exchange\.Candle\.Close') | |
-| [High](SHTCGClient.Models.Exchange.Candle.High.md 'SHTCGClient\.Models\.Exchange\.Candle\.High') | |
-| [Low](SHTCGClient.Models.Exchange.Candle.Low.md 'SHTCGClient\.Models\.Exchange\.Candle\.Low') | |
-| [Open](SHTCGClient.Models.Exchange.Candle.Open.md 'SHTCGClient\.Models\.Exchange\.Candle\.Open') | |
-| [Timestamp](SHTCGClient.Models.Exchange.Candle.Timestamp.md 'SHTCGClient\.Models\.Exchange\.Candle\.Timestamp') | |
-| [Volume](SHTCGClient.Models.Exchange.Candle.Volume.md 'SHTCGClient\.Models\.Exchange\.Candle\.Volume') | |
+<a name='SHTCGClient.Models.Exchange.Candle.Close'></a>
+
+## Candle\.Close Property
+
+```csharp
+public double Close { get; init; }
+```
+
+#### Property Value
+[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')
+
+<a name='SHTCGClient.Models.Exchange.Candle.High'></a>
+
+## Candle\.High Property
+
+```csharp
+public double High { get; init; }
+```
+
+#### Property Value
+[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')
+
+<a name='SHTCGClient.Models.Exchange.Candle.Low'></a>
+
+## Candle\.Low Property
+
+```csharp
+public double Low { get; init; }
+```
+
+#### Property Value
+[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')
+
+<a name='SHTCGClient.Models.Exchange.Candle.Open'></a>
+
+## Candle\.Open Property
+
+```csharp
+public double Open { get; init; }
+```
+
+#### Property Value
+[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')
+
+<a name='SHTCGClient.Models.Exchange.Candle.Timestamp'></a>
+
+## Candle\.Timestamp Property
+
+```csharp
+public System.DateTime Timestamp { get; init; }
+```
+
+#### Property Value
+[System\.DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.datetime 'System\.DateTime')
+
+<a name='SHTCGClient.Models.Exchange.Candle.Volume'></a>
+
+## Candle\.Volume Property
+
+```csharp
+public int Volume { get; init; }
+```
+
+#### Property Value
+[System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')

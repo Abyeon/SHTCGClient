@@ -12,22 +12,158 @@ public class Profile : System.IEquatable<SHTCGClient.Models.Users.Profile>
 Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object') &#129106; Profile
 
 Implements [System\.IEquatable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.iequatable-1 'System\.IEquatable\`1')[Profile](SHTCGClient.Models.Users.Profile.md 'SHTCGClient\.Models\.Users\.Profile')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.iequatable-1 'System\.IEquatable\`1')
+### Properties
 
-| Properties | |
-| :--- | :--- |
-| [Avatar](SHTCGClient.Models.Users.Profile.Avatar.md 'SHTCGClient\.Models\.Users\.Profile\.Avatar') | |
-| [BannerColor](SHTCGClient.Models.Users.Profile.BannerColor.md 'SHTCGClient\.Models\.Users\.Profile\.BannerColor') | |
-| [Bio](SHTCGClient.Models.Users.Profile.Bio.md 'SHTCGClient\.Models\.Users\.Profile\.Bio') | |
-| [DisplayName](SHTCGClient.Models.Users.Profile.DisplayName.md 'SHTCGClient\.Models\.Users\.Profile\.DisplayName') | |
-| [EquippedBannerImage](SHTCGClient.Models.Users.Profile.EquippedBannerImage.md 'SHTCGClient\.Models\.Users\.Profile\.EquippedBannerImage') | |
-| [EquippedTitle](SHTCGClient.Models.Users.Profile.EquippedTitle.md 'SHTCGClient\.Models\.Users\.Profile\.EquippedTitle') | |
-| [Id](SHTCGClient.Models.Users.Profile.Id.md 'SHTCGClient\.Models\.Users\.Profile\.Id') | |
-| [IsAnonymous](SHTCGClient.Models.Users.Profile.IsAnonymous.md 'SHTCGClient\.Models\.Users\.Profile\.IsAnonymous') | |
-| [ProfileColor](SHTCGClient.Models.Users.Profile.ProfileColor.md 'SHTCGClient\.Models\.Users\.Profile\.ProfileColor') | |
-| [Username](SHTCGClient.Models.Users.Profile.Username.md 'SHTCGClient\.Models\.Users\.Profile\.Username') | |
+<a name='SHTCGClient.Models.Users.Profile.Avatar'></a>
 
-| Methods | |
-| :--- | :--- |
-| [Equals\(object\)](SHTCGClient.Models.Users.Profile.Equals.md#SHTCGClient.Models.Users.Profile.Equals(object) 'SHTCGClient\.Models\.Users\.Profile\.Equals\(object\)') | |
-| [Equals\(Profile\)](SHTCGClient.Models.Users.Profile.Equals.md#SHTCGClient.Models.Users.Profile.Equals(SHTCGClient.Models.Users.Profile) 'SHTCGClient\.Models\.Users\.Profile\.Equals\(SHTCGClient\.Models\.Users\.Profile\)') | |
-| [GetHashCode\(\)](SHTCGClient.Models.Users.Profile.GetHashCode().md 'SHTCGClient\.Models\.Users\.Profile\.GetHashCode\(\)') | |
+## Profile\.Avatar Property
+
+```csharp
+public string? Avatar { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Users.Profile.BannerColor'></a>
+
+## Profile\.BannerColor Property
+
+```csharp
+public string? BannerColor { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Users.Profile.Bio'></a>
+
+## Profile\.Bio Property
+
+```csharp
+public string? Bio { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Users.Profile.DisplayName'></a>
+
+## Profile\.DisplayName Property
+
+```csharp
+public string? DisplayName { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Users.Profile.EquippedBannerImage'></a>
+
+## Profile\.EquippedBannerImage Property
+
+```csharp
+public SHTCGClient.Models.Users.BannerImage? EquippedBannerImage { get; init; }
+```
+
+#### Property Value
+[BannerImage](SHTCGClient.Models.Users.BannerImage.md 'SHTCGClient\.Models\.Users\.BannerImage')
+
+<a name='SHTCGClient.Models.Users.Profile.EquippedTitle'></a>
+
+## Profile\.EquippedTitle Property
+
+```csharp
+public string? EquippedTitle { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Users.Profile.Id'></a>
+
+## Profile\.Id Property
+
+```csharp
+public int Id { get; init; }
+```
+
+#### Property Value
+[System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')
+
+<a name='SHTCGClient.Models.Users.Profile.IsAnonymous'></a>
+
+## Profile\.IsAnonymous Property
+
+```csharp
+public System.Nullable<bool> IsAnonymous { get; init; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[System\.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System\.Boolean')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
+<a name='SHTCGClient.Models.Users.Profile.ProfileColor'></a>
+
+## Profile\.ProfileColor Property
+
+```csharp
+public string? ProfileColor { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Users.Profile.Username'></a>
+
+## Profile\.Username Property
+
+```csharp
+public string? Username { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+### Methods
+
+<a name='SHTCGClient.Models.Users.Profile.Equals(object)'></a>
+
+## Profile\.Equals\(object\) Method
+
+```csharp
+public override bool Equals(object? obj);
+```
+#### Parameters
+
+<a name='SHTCGClient.Models.Users.Profile.Equals(object).obj'></a>
+
+`obj` [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object')
+
+#### Returns
+[System\.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System\.Boolean')
+
+<a name='SHTCGClient.Models.Users.Profile.Equals(SHTCGClient.Models.Users.Profile)'></a>
+
+## Profile\.Equals\(Profile\) Method
+
+```csharp
+public bool Equals(SHTCGClient.Models.Users.Profile? other);
+```
+#### Parameters
+
+<a name='SHTCGClient.Models.Users.Profile.Equals(SHTCGClient.Models.Users.Profile).other'></a>
+
+`other` [Profile](SHTCGClient.Models.Users.Profile.md 'SHTCGClient\.Models\.Users\.Profile')
+
+#### Returns
+[System\.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System\.Boolean')
+
+<a name='SHTCGClient.Models.Users.Profile.GetHashCode()'></a>
+
+## Profile\.GetHashCode\(\) Method
+
+```csharp
+public override int GetHashCode();
+```
+
+#### Returns
+[System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')

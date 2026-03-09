@@ -8,16 +8,114 @@ public class SpriteSheet
 ```
 
 Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object') &#129106; SpriteSheet
+### Properties
 
-| Properties | |
-| :--- | :--- |
-| [Angry1](SHTCGClient.Models.Companions.SpriteSheet.Angry1.md 'SHTCGClient\.Models\.Companions\.SpriteSheet\.Angry1') | |
-| [Angry2](SHTCGClient.Models.Companions.SpriteSheet.Angry2.md 'SHTCGClient\.Models\.Companions\.SpriteSheet\.Angry2') | |
-| [Happy1](SHTCGClient.Models.Companions.SpriteSheet.Happy1.md 'SHTCGClient\.Models\.Companions\.SpriteSheet\.Happy1') | |
-| [Happy2](SHTCGClient.Models.Companions.SpriteSheet.Happy2.md 'SHTCGClient\.Models\.Companions\.SpriteSheet\.Happy2') | |
-| [Love1](SHTCGClient.Models.Companions.SpriteSheet.Love1.md 'SHTCGClient\.Models\.Companions\.SpriteSheet\.Love1') | |
-| [Love2](SHTCGClient.Models.Companions.SpriteSheet.Love2.md 'SHTCGClient\.Models\.Companions\.SpriteSheet\.Love2') | |
-| [Neutral1](SHTCGClient.Models.Companions.SpriteSheet.Neutral1.md 'SHTCGClient\.Models\.Companions\.SpriteSheet\.Neutral1') | |
-| [Neutral2](SHTCGClient.Models.Companions.SpriteSheet.Neutral2.md 'SHTCGClient\.Models\.Companions\.SpriteSheet\.Neutral2') | |
-| [Sad1](SHTCGClient.Models.Companions.SpriteSheet.Sad1.md 'SHTCGClient\.Models\.Companions\.SpriteSheet\.Sad1') | |
-| [Sad2](SHTCGClient.Models.Companions.SpriteSheet.Sad2.md 'SHTCGClient\.Models\.Companions\.SpriteSheet\.Sad2') | |
+<a name='SHTCGClient.Models.Companions.SpriteSheet.Angry1'></a>
+
+## SpriteSheet\.Angry1 Property
+
+```csharp
+public string? Angry1 { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Companions.SpriteSheet.Angry2'></a>
+
+## SpriteSheet\.Angry2 Property
+
+```csharp
+public string? Angry2 { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Companions.SpriteSheet.Happy1'></a>
+
+## SpriteSheet\.Happy1 Property
+
+```csharp
+public string? Happy1 { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Companions.SpriteSheet.Happy2'></a>
+
+## SpriteSheet\.Happy2 Property
+
+```csharp
+public string? Happy2 { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Companions.SpriteSheet.Love1'></a>
+
+## SpriteSheet\.Love1 Property
+
+```csharp
+public string? Love1 { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Companions.SpriteSheet.Love2'></a>
+
+## SpriteSheet\.Love2 Property
+
+```csharp
+public string? Love2 { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Companions.SpriteSheet.Neutral1'></a>
+
+## SpriteSheet\.Neutral1 Property
+
+```csharp
+public string? Neutral1 { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Companions.SpriteSheet.Neutral2'></a>
+
+## SpriteSheet\.Neutral2 Property
+
+```csharp
+public string? Neutral2 { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Companions.SpriteSheet.Sad1'></a>
+
+## SpriteSheet\.Sad1 Property
+
+```csharp
+public string? Sad1 { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Companions.SpriteSheet.Sad2'></a>
+
+## SpriteSheet\.Sad2 Property
+
+```csharp
+public string? Sad2 { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')

@@ -10,15 +10,103 @@ public class Position
 ```
 
 Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object') &#129106; Position
+### Properties
 
-| Properties | |
-| :--- | :--- |
-| [AvgCost](SHTCGClient.Models.Exchange.Position.AvgCost.md 'SHTCGClient\.Models\.Exchange\.Position\.AvgCost') | |
-| [CostBasis](SHTCGClient.Models.Exchange.Position.CostBasis.md 'SHTCGClient\.Models\.Exchange\.Position\.CostBasis') | |
-| [MarketId](SHTCGClient.Models.Exchange.Position.MarketId.md 'SHTCGClient\.Models\.Exchange\.Position\.MarketId') | |
-| [MarketPrice](SHTCGClient.Models.Exchange.Position.MarketPrice.md 'SHTCGClient\.Models\.Exchange\.Position\.MarketPrice') | |
-| [MarketValue](SHTCGClient.Models.Exchange.Position.MarketValue.md 'SHTCGClient\.Models\.Exchange\.Position\.MarketValue') | |
-| [Quantity](SHTCGClient.Models.Exchange.Position.Quantity.md 'SHTCGClient\.Models\.Exchange\.Position\.Quantity') | |
-| [Symbol](SHTCGClient.Models.Exchange.Position.Symbol.md 'SHTCGClient\.Models\.Exchange\.Position\.Symbol') | |
-| [UnrealizedPnl](SHTCGClient.Models.Exchange.Position.UnrealizedPnl.md 'SHTCGClient\.Models\.Exchange\.Position\.UnrealizedPnl') | |
-| [UnrealizedPnlPercentage](SHTCGClient.Models.Exchange.Position.UnrealizedPnlPercentage.md 'SHTCGClient\.Models\.Exchange\.Position\.UnrealizedPnlPercentage') | |
+<a name='SHTCGClient.Models.Exchange.Position.AvgCost'></a>
+
+## Position\.AvgCost Property
+
+```csharp
+public double AvgCost { get; init; }
+```
+
+#### Property Value
+[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')
+
+<a name='SHTCGClient.Models.Exchange.Position.CostBasis'></a>
+
+## Position\.CostBasis Property
+
+```csharp
+public double CostBasis { get; init; }
+```
+
+#### Property Value
+[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')
+
+<a name='SHTCGClient.Models.Exchange.Position.MarketId'></a>
+
+## Position\.MarketId Property
+
+```csharp
+public int MarketId { get; init; }
+```
+
+#### Property Value
+[System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')
+
+<a name='SHTCGClient.Models.Exchange.Position.MarketPrice'></a>
+
+## Position\.MarketPrice Property
+
+```csharp
+public double MarketPrice { get; init; }
+```
+
+#### Property Value
+[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')
+
+<a name='SHTCGClient.Models.Exchange.Position.MarketValue'></a>
+
+## Position\.MarketValue Property
+
+```csharp
+public double MarketValue { get; init; }
+```
+
+#### Property Value
+[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')
+
+<a name='SHTCGClient.Models.Exchange.Position.Quantity'></a>
+
+## Position\.Quantity Property
+
+```csharp
+public int Quantity { get; init; }
+```
+
+#### Property Value
+[System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')
+
+<a name='SHTCGClient.Models.Exchange.Position.Symbol'></a>
+
+## Position\.Symbol Property
+
+```csharp
+public string Symbol { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Exchange.Position.UnrealizedPnl'></a>
+
+## Position\.UnrealizedPnl Property
+
+```csharp
+public double UnrealizedPnl { get; init; }
+```
+
+#### Property Value
+[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')
+
+<a name='SHTCGClient.Models.Exchange.Position.UnrealizedPnlPercentage'></a>
+
+## Position\.UnrealizedPnlPercentage Property
+
+```csharp
+public double UnrealizedPnlPercentage { get; init; }
+```
+
+#### Property Value
+[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')

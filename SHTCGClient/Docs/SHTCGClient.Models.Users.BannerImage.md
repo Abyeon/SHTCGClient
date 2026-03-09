@@ -10,11 +10,59 @@ public class BannerImage
 ```
 
 Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object') &#129106; BannerImage
+### Properties
 
-| Properties | |
-| :--- | :--- |
-| [Code](SHTCGClient.Models.Users.BannerImage.Code.md 'SHTCGClient\.Models\.Users\.BannerImage\.Code') | |
-| [Focus](SHTCGClient.Models.Users.BannerImage.Focus.md 'SHTCGClient\.Models\.Users\.BannerImage\.Focus') | |
-| [Id](SHTCGClient.Models.Users.BannerImage.Id.md 'SHTCGClient\.Models\.Users\.BannerImage\.Id') | |
-| [ImageUrl](SHTCGClient.Models.Users.BannerImage.ImageUrl.md 'SHTCGClient\.Models\.Users\.BannerImage\.ImageUrl') | |
-| [Name](SHTCGClient.Models.Users.BannerImage.Name.md 'SHTCGClient\.Models\.Users\.BannerImage\.Name') | |
+<a name='SHTCGClient.Models.Users.BannerImage.Code'></a>
+
+## BannerImage\.Code Property
+
+```csharp
+public string Code { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Users.BannerImage.Focus'></a>
+
+## BannerImage\.Focus Property
+
+```csharp
+public int Focus { get; init; }
+```
+
+#### Property Value
+[System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')
+
+<a name='SHTCGClient.Models.Users.BannerImage.Id'></a>
+
+## BannerImage\.Id Property
+
+```csharp
+public int Id { get; init; }
+```
+
+#### Property Value
+[System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')
+
+<a name='SHTCGClient.Models.Users.BannerImage.ImageUrl'></a>
+
+## BannerImage\.ImageUrl Property
+
+```csharp
+public string ImageUrl { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.Models.Users.BannerImage.Name'></a>
+
+## BannerImage\.Name Property
+
+```csharp
+public string Name { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
