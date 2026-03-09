@@ -1,0 +1,11 @@
+#### [SHTCGClient](index.md 'index')
+### [SHTCGClient\.Models\.Vendors](SHTCGClient.Models.Vendors.md 'SHTCGClient\.Models\.Vendors').[CardSellResponse](SHTCGClient.Models.Vendors.CardSellResponse.md 'SHTCGClient\.Models\.Vendors\.CardSellResponse')
+
+## CardSellResponse\.TotalValue Property
+
+```csharp
+public double TotalValue { get; set; }
+```
+
+#### Property Value
+[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')

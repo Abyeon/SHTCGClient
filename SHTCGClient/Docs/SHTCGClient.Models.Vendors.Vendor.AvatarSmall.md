@@ -1,0 +1,11 @@
+#### [SHTCGClient](index.md 'index')
+### [SHTCGClient\.Models\.Vendors](SHTCGClient.Models.Vendors.md 'SHTCGClient\.Models\.Vendors').[Vendor](SHTCGClient.Models.Vendors.Vendor.md 'SHTCGClient\.Models\.Vendors\.Vendor')
+
+## Vendor\.AvatarSmall Property
+
+```csharp
+public string? AvatarSmall { get; init; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
