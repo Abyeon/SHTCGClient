@@ -1,0 +1,46 @@
+name: Generate API Documentation
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-document:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Setup .NET
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x' 
+
+      # 3. Build the project in Release mode to generate the .dll and .xml
+      - name: Build Project
+        run: dotnet build --configuration Release
+
+      # 4. Install the markdown generator tool
+      - name: Install XMLDoc2Markdown
+        run: dotnet tool install -g XMLDoc2Markdown
+
+      # 5. Generate the Markdown docs into the 'docs' folder
+      - name: Generate Docs
+        run: xmldoc2md ./bin/Release/net10.0/SHTCGClient.dll ./docs
+
+      # 6. Commit and push the updated docs back to the repository
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add ./docs
+          # Only commit if there are actually changes to avoid failing the action
+          git diff --quiet && git diff --staged --quiet || git commit -m "docs: auto-update API documentation"
+          git push
