@@ -1,2 +1,10 @@
 ﻿{
+  "NamespaceDocItem": {
+    "Sections": [
+      "Title",
+      "summary",
+      "TableOfContents"
+    ],
+    "Markdown.TableOfContentsModes": "IncludeKind,IncludeSummary"
+  }
 }
