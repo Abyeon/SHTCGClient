@@ -1,10 +1,11 @@
-name: Generate API Documentation
+name: Generate API Documentation to Wiki
 
 on:
   push:
     branches:
       - main
 
+# Give the action permission to commit to repositories
 permissions:
   contents: write
 
@@ -13,34 +14,45 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout the repository
+      # 1. Checkout your main codebase
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          path: ./main-repo
 
-      # 2. Setup .NET
+      # 2. Checkout your Wiki repository into a folder named 'wiki'
+      - name: Checkout Wiki
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}.wiki
+          path: ./wiki
+
+      # 3. Setup .NET
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x' 
 
-      # 3. Build the project in Release mode to generate the .dll and .xml
+      # 4. Build the project from the main-repo folder
       - name: Build Project
-        run: dotnet build --configuration Release
+        run: dotnet build ./main-repo/SHTCGClient.csproj --configuration Release
 
-      # 4. Install the markdown generator tool
+      # 5. Install the markdown generator tool
       - name: Install XMLDoc2Markdown
         run: dotnet tool install -g XMLDoc2Markdown
 
-      # 5. Generate the Markdown docs into the 'docs' folder
+      # 6. Generate the Markdown docs directly into the 'wiki' folder
       - name: Generate Docs
-        run: xmldoc2md ./bin/Release/net10.0/SHTCGClient.dll ./docs
+        run: xmldoc2md ./main-repo/bin/Release/net10.0/SHTCGClient.dll ./wiki
 
-      # 6. Commit and push the updated docs back to the repository
-      - name: Commit and Push Changes
+      # 7. Commit and push the changes straight to the Wiki repo
+      - name: Commit and Push to Wiki
         run: |
+          cd ./wiki
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add ./docs
-          # Only commit if there are actually changes to avoid failing the action
+          git add .
+          
+          # Only commit if there are actually changes
           git diff --quiet && git diff --staged --quiet || git commit -m "docs: auto-update API documentation"
           git push
