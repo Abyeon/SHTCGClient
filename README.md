@@ -1,6 +1,8 @@
 # SHTCGClient
 An API wrapper for the (currently beta) Something Happened Trading Card Game.
 
+Check out the [Docs](/SHTCGClient/Docs/index.md)!
+
 ## Usage
 
 ### Logging in
