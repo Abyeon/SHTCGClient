@@ -36,7 +36,7 @@ jobs:
 
       # 4. Build the project from the main-repo folder
       - name: Build Project
-        run: dotnet build ./main-repo/SHTCGClient.csproj --configuration Release
+        run: dotnet build ./main-repo/SHTCGClient/SHTCGClient.csproj --configuration Release
 
       # 5. Install the markdown generator tool
       - name: Install XMLDoc2Markdown
@@ -44,7 +44,7 @@ jobs:
 
       # 6. Generate the Markdown docs directly into the 'wiki' folder
       - name: Generate Docs
-        run: xmldoc2md ./main-repo/bin/Release/net10.0/SHTCGClient.dll ./wiki
+        run: xmldoc2md ./main-repo/SHTCGClient/bin/Release/net10.0/SHTCGClient.dll ./wiki
 
       # 7. Commit and push the changes straight to the Wiki repo
       - name: Commit and Push to Wiki
