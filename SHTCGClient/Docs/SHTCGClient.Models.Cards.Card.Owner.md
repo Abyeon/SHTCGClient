@@ -4,7 +4,7 @@
 ## Card\.Owner Property
 
 ```csharp
-public SHTCGClient.Models.Users.Profile? Owner { get; private set; }
+public SHTCGClient.Models.Users.Profile? Owner { get; }
 ```
 
 #### Property Value

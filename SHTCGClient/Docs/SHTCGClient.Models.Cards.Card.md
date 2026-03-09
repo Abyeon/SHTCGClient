@@ -42,6 +42,5 @@ Implements [System\.IEquatable&lt;](https://learn.microsoft.com/en-us/dotnet/api
 | [Equals\(object\)](SHTCGClient.Models.Cards.Card.Equals.md#SHTCGClient.Models.Cards.Card.Equals(object) 'SHTCGClient\.Models\.Cards\.Card\.Equals\(object\)') | |
 | [Equals\(Card\)](SHTCGClient.Models.Cards.Card.Equals.md#SHTCGClient.Models.Cards.Card.Equals(SHTCGClient.Models.Cards.Card) 'SHTCGClient\.Models\.Cards\.Card\.Equals\(SHTCGClient\.Models\.Cards\.Card\)') | |
 | [GetHashCode\(\)](SHTCGClient.Models.Cards.Card.GetHashCode().md 'SHTCGClient\.Models\.Cards\.Card\.GetHashCode\(\)') | |
-| [GetStringValue\(string\)](SHTCGClient.Models.Cards.Card.GetStringValue(string).md 'SHTCGClient\.Models\.Cards\.Card\.GetStringValue\(string\)') | |
 | [OnDeserialized\(\)](SHTCGClient.Models.Cards.Card.OnDeserialized().md 'SHTCGClient\.Models\.Cards\.Card\.OnDeserialized\(\)') | |
 | [Sell\(ClientService\)](SHTCGClient.Models.Cards.Card.Sell(SHTCGClient.ClientService).md 'SHTCGClient\.Models\.Cards\.Card\.Sell\(SHTCGClient\.ClientService\)') | Sell this card |

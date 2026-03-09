@@ -8,6 +8,7 @@
         <DefaultDocumentationFolder>Docs</DefaultDocumentationFolder>
         <DefaultDocumentationIncludeUndocumentedItems>true</DefaultDocumentationIncludeUndocumentedItems>
         <DefaultDocumentationGeneratedPages>Assembly,Types,Members</DefaultDocumentationGeneratedPages>
+        <DefaultDocumentationGeneratedAccessModifiers>Public,Api</DefaultDocumentationGeneratedAccessModifiers>
     </PropertyGroup>
 
     <ItemGroup>
