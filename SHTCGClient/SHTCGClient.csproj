@@ -4,6 +4,12 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DefaultDocumentationFolder>Docs</DefaultDocumentationFolder>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="DefaultDocumentation" Version="1.2.4" />
+    </ItemGroup>
 
 </Project>

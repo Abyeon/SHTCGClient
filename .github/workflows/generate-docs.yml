@@ -3,10 +3,9 @@ name: Generate API Documentation to Wiki
 on:
   push:
     branches:
-      - main
-  workflow_dispatch: 
+      - master
+  workflow_dispatch:
 
-# Give the action permission to commit to repositories
 permissions:
   contents: write
 
@@ -15,38 +14,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout your main codebase
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
           path: ./main-repo
 
-      # 2. Checkout your Wiki repository into a folder named 'wiki'
       - name: Checkout Wiki
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository }}.wiki
           path: ./wiki
 
-      # 3. Setup .NET
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '10.0.x' 
-
-      # 4. Build the project from the main-repo folder
+          dotnet-version: '10.0.x'
+      
       - name: Build Project
-        run: dotnet build ./main-repo/SHTCGClient/SHTCGClient.csproj --configuration Release -p:GenerateDocumentationFile=true
+        run: dotnet build ./main-repo/SHTCGClient/SHTCGClient.csproj --configuration Release
 
-      # 5. Install the markdown generator tool
-      - name: Install DefaultDocumentation
-        run: dotnet tool install -g DefaultDocumentation.Console
+      - name: Move Docs to Wiki
+        run: cp -a ./main-repo/SHTCGClient/Docs/. ./wiki/
 
-      # 6. Generate the Markdown docs directly into the 'wiki' folder
-      - name: Generate Docs
-        run: defaultdocumentation -a ./main-repo/SHTCGClient/bin/Release/net10.0/SHTCGClient.dll -o ./wiki
-
-      # 7. Commit and push the changes straight to the Wiki repo
       - name: Commit and Push to Wiki
         run: |
           cd ./wiki
@@ -54,6 +43,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           
-          # Only commit if there are actually changes
           git diff --quiet && git diff --staged --quiet || git commit -m "docs: auto-update API documentation"
           git push
