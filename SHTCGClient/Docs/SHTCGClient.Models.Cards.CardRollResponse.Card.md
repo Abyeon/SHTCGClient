@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Cards](SHTCGClient.Models.Cards.md 'SHTCGClient\.Models\.Cards').[CardRollResponse](SHTCGClient.Models.Cards.CardRollResponse.md 'SHTCGClient\.Models\.Cards\.CardRollResponse')
+### [SHTCGClient\.Models\.Cards](index.md#SHTCGClient.Models.Cards 'SHTCGClient\.Models\.Cards').[CardRollResponse](SHTCGClient.Models.Cards.CardRollResponse.md 'SHTCGClient\.Models\.Cards\.CardRollResponse')
 
 ## CardRollResponse\.Card Property
 

@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient](SHTCGClient.md 'SHTCGClient').[ThrottledProcessor](SHTCGClient.ThrottledProcessor.md 'SHTCGClient\.ThrottledProcessor')
+### [SHTCGClient](index.md#SHTCGClient 'SHTCGClient').[ThrottledProcessor](SHTCGClient.ThrottledProcessor.md 'SHTCGClient\.ThrottledProcessor')
 
 ## ThrottledProcessor\.\_cts Field
 

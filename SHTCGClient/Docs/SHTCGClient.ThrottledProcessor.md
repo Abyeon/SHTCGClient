@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient](SHTCGClient.md 'SHTCGClient')
+### [SHTCGClient](index.md#SHTCGClient 'SHTCGClient')
 
 ## ThrottledProcessor Class
 

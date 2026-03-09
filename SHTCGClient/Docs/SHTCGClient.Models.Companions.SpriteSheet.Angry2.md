@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Companions](SHTCGClient.Models.Companions.md 'SHTCGClient\.Models\.Companions').[SpriteSheet](SHTCGClient.Models.Companions.SpriteSheet.md 'SHTCGClient\.Models\.Companions\.SpriteSheet')
+### [SHTCGClient\.Models\.Companions](index.md#SHTCGClient.Models.Companions 'SHTCGClient\.Models\.Companions').[SpriteSheet](SHTCGClient.Models.Companions.SpriteSheet.md 'SHTCGClient\.Models\.Companions\.SpriteSheet')
 
 ## SpriteSheet\.Angry2 Property
 

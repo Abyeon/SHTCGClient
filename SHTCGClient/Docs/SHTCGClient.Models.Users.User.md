@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Users](SHTCGClient.Models.Users.md 'SHTCGClient\.Models\.Users')
+### [SHTCGClient\.Models\.Users](index.md#SHTCGClient.Models.Users 'SHTCGClient\.Models\.Users')
 
 ## User Class
 

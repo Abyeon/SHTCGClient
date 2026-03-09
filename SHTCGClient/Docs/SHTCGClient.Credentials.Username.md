@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient](SHTCGClient.md 'SHTCGClient').[Credentials](SHTCGClient.Credentials.md 'SHTCGClient\.Credentials')
+### [SHTCGClient](index.md#SHTCGClient 'SHTCGClient').[Credentials](SHTCGClient.Credentials.md 'SHTCGClient\.Credentials')
 
 ## Credentials\.Username Property
 

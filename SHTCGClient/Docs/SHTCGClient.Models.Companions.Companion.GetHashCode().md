@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Companions](SHTCGClient.Models.Companions.md 'SHTCGClient\.Models\.Companions').[Companion](SHTCGClient.Models.Companions.Companion.md 'SHTCGClient\.Models\.Companions\.Companion')
+### [SHTCGClient\.Models\.Companions](index.md#SHTCGClient.Models.Companions 'SHTCGClient\.Models\.Companions').[Companion](SHTCGClient.Models.Companions.Companion.md 'SHTCGClient\.Models\.Companions\.Companion')
 
 ## Companion\.GetHashCode\(\) Method
 

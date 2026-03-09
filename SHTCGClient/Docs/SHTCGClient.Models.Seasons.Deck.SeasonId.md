@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Seasons](SHTCGClient.Models.Seasons.md 'SHTCGClient\.Models\.Seasons').[Deck](SHTCGClient.Models.Seasons.Deck.md 'SHTCGClient\.Models\.Seasons\.Deck')
+### [SHTCGClient\.Models\.Seasons](index.md#SHTCGClient.Models.Seasons 'SHTCGClient\.Models\.Seasons').[Deck](SHTCGClient.Models.Seasons.Deck.md 'SHTCGClient\.Models\.Seasons\.Deck')
 
 ## Deck\.SeasonId Property
 

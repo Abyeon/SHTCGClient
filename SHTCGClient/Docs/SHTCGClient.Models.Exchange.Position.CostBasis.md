@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Exchange](SHTCGClient.Models.Exchange.md 'SHTCGClient\.Models\.Exchange').[Position](SHTCGClient.Models.Exchange.Position.md 'SHTCGClient\.Models\.Exchange\.Position')
+### [SHTCGClient\.Models\.Exchange](index.md#SHTCGClient.Models.Exchange 'SHTCGClient\.Models\.Exchange').[Position](SHTCGClient.Models.Exchange.Position.md 'SHTCGClient\.Models\.Exchange\.Position')
 
 ## Position\.CostBasis Property
 

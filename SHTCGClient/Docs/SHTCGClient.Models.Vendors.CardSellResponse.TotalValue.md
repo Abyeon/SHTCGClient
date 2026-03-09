@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Vendors](SHTCGClient.Models.Vendors.md 'SHTCGClient\.Models\.Vendors').[CardSellResponse](SHTCGClient.Models.Vendors.CardSellResponse.md 'SHTCGClient\.Models\.Vendors\.CardSellResponse')
+### [SHTCGClient\.Models\.Vendors](index.md#SHTCGClient.Models.Vendors 'SHTCGClient\.Models\.Vendors').[CardSellResponse](SHTCGClient.Models.Vendors.CardSellResponse.md 'SHTCGClient\.Models\.Vendors\.CardSellResponse')
 
 ## CardSellResponse\.TotalValue Property
 

@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Exchange](SHTCGClient.Models.Exchange.md 'SHTCGClient\.Models\.Exchange').[Symbol](SHTCGClient.Models.Exchange.Symbol.md 'SHTCGClient\.Models\.Exchange\.Symbol')
+### [SHTCGClient\.Models\.Exchange](index.md#SHTCGClient.Models.Exchange 'SHTCGClient\.Models\.Exchange').[Symbol](SHTCGClient.Models.Exchange.Symbol.md 'SHTCGClient\.Models\.Exchange\.Symbol')
 
 ## Symbol\.BaseCardImageUrl Property
 

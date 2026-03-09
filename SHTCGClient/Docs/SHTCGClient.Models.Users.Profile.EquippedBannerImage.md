@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Users](SHTCGClient.Models.Users.md 'SHTCGClient\.Models\.Users').[Profile](SHTCGClient.Models.Users.Profile.md 'SHTCGClient\.Models\.Users\.Profile')
+### [SHTCGClient\.Models\.Users](index.md#SHTCGClient.Models.Users 'SHTCGClient\.Models\.Users').[Profile](SHTCGClient.Models.Users.Profile.md 'SHTCGClient\.Models\.Users\.Profile')
 
 ## Profile\.EquippedBannerImage Property
 

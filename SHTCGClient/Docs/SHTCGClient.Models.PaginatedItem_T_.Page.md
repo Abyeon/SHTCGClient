@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models](SHTCGClient.Models.md 'SHTCGClient\.Models').[PaginatedItem&lt;T&gt;](SHTCGClient.Models.PaginatedItem_T_.md 'SHTCGClient\.Models\.PaginatedItem\<T\>')
+### [SHTCGClient\.Models](index.md#SHTCGClient.Models 'SHTCGClient\.Models').[PaginatedItem&lt;T&gt;](SHTCGClient.Models.PaginatedItem_T_.md 'SHTCGClient\.Models\.PaginatedItem\<T\>')
 
 ## PaginatedItem\<T\>\.Page Property
 

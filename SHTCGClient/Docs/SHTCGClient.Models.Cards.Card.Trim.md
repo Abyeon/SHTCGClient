@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Cards](SHTCGClient.Models.Cards.md 'SHTCGClient\.Models\.Cards').[Card](SHTCGClient.Models.Cards.Card.md 'SHTCGClient\.Models\.Cards\.Card')
+### [SHTCGClient\.Models\.Cards](index.md#SHTCGClient.Models.Cards 'SHTCGClient\.Models\.Cards').[Card](SHTCGClient.Models.Cards.Card.md 'SHTCGClient\.Models\.Cards\.Card')
 
 ## Card\.Trim Property
 

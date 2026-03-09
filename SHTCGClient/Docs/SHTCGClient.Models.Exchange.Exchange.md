@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Exchange](SHTCGClient.Models.Exchange.md 'SHTCGClient\.Models\.Exchange')
+### [SHTCGClient\.Models\.Exchange](index.md#SHTCGClient.Models.Exchange 'SHTCGClient\.Models\.Exchange')
 
 ## Exchange Class
 

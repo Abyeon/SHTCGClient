@@ -1,5 +1,5 @@
 #### [SHTCGClient](index.md 'index')
-### [SHTCGClient\.Models\.Cards](SHTCGClient.Models.Cards.md 'SHTCGClient\.Models\.Cards').[RollInfo](SHTCGClient.Models.Cards.RollInfo.md 'SHTCGClient\.Models\.Cards\.RollInfo')
+### [SHTCGClient\.Models\.Cards](index.md#SHTCGClient.Models.Cards 'SHTCGClient\.Models\.Cards').[RollInfo](SHTCGClient.Models.Cards.RollInfo.md 'SHTCGClient\.Models\.Cards\.RollInfo')
 
 ## RollInfo\.RollRefillCost Property
 
