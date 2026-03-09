@@ -3,7 +3,7 @@ name: Generate API Documentation to Wiki
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch: 
 
 # Give the action permission to commit to repositories
