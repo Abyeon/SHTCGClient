@@ -2,6 +2,9 @@
 
 namespace SHTCGClient.Models.Exchange;
 
+/// <summary>
+/// Stock information
+/// </summary>
 public class Exchange
 {
     [JsonPropertyName("id")]

@@ -2,6 +2,9 @@
 
 namespace SHTCGClient.Models.Exchange;
 
+/// <summary>
+/// Additional exchange info
+/// </summary>
 public class Symbol
 {
     [JsonPropertyName("id")]

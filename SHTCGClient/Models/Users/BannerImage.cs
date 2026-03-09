@@ -2,6 +2,9 @@
 
 namespace SHTCGClient.Models.Users;
 
+/// <summary>
+/// Banner information for a profile. This is what appears above player's names in their profile page.
+/// </summary>
 public class BannerImage
 {
     [JsonPropertyName("id")]

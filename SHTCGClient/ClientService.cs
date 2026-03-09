@@ -11,12 +11,18 @@ using SHTCGClient.Models.Vendors;
 
 namespace SHTCGClient;
 
+/// <summary>
+/// An object for storing user login credentials.
+/// </summary>
 public struct Credentials
 {
     public string Username { get; set; }
     public string Password { get; set; }
 }
 
+/// <summary>
+/// The main service for interacting with the Something Happened TCG API.
+/// </summary>
 public class ClientService : IAsyncDisposable
 {
     public readonly CookieContainer CookieContainer;

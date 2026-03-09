@@ -2,6 +2,9 @@
 
 namespace SHTCGClient.Models.Users;
 
+/// <summary>
+/// User information.
+/// </summary>
 public class User : IEquatable<User>
 {
     [JsonPropertyName("id")]

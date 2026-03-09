@@ -4,6 +4,9 @@ using SHTCGClient.Models.Users;
 
 namespace SHTCGClient.Models.Seasons;
 
+/// <summary>
+/// Object containing cards for a season.
+/// </summary>
 public class Deck : IEquatable<Deck>
 {
     [JsonPropertyName("id")]

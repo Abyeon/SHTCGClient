@@ -2,6 +2,9 @@
 
 namespace SHTCGClient.Models.Users;
 
+/// <summary>
+/// Additional user information, used on the profile page, leaderboard, and roll history
+/// </summary>
 public class Profile : IEquatable<Profile>
 {
     [JsonPropertyName("id")]

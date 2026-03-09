@@ -2,6 +2,9 @@
 
 namespace SHTCGClient.Models.Vendors;
 
+/// <summary>
+/// Shop NPC information.
+/// </summary>
 public class Vendor : IEquatable<Vendor>
 {
     [JsonPropertyName("id")]

@@ -3,6 +3,10 @@ using System.Text.Json.Serialization;
 
 namespace SHTCGClient.Models;
 
+/// <summary>
+/// Generic object representing a paginated response
+/// </summary>
+/// <typeparam name="T">Type for the data array</typeparam>
 public class PaginatedItem<T>
 {
     [JsonPropertyName("total")]

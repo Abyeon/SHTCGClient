@@ -3,6 +3,9 @@ using SHTCGClient.Models.Cards;
 
 namespace SHTCGClient.Models.Companions;
 
+/// <summary>
+/// A pet that will provide bonuses and detriments to a user's rolls.
+/// </summary>
 public class Companion : IEquatable<Companion>
 {
     [JsonPropertyName("id")]

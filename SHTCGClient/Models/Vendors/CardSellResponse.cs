@@ -2,6 +2,9 @@
 
 namespace SHTCGClient.Models.Vendors;
 
+/// <summary>
+/// Information for a sold card.
+/// </summary>
 public class CardSellResponse
 {
     [JsonPropertyName("message")]

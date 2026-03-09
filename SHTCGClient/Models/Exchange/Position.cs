@@ -2,6 +2,9 @@
 
 namespace SHTCGClient.Models.Exchange;
 
+/// <summary>
+/// The user's currently purchases positions in a stock.
+/// </summary>
 public class Position
 {
     [JsonPropertyName("quantity")]

@@ -5,6 +5,9 @@ using SHTCGClient.Models.Vendors;
 
 namespace SHTCGClient.Models.Cards;
 
+/// <summary>
+/// A Trading Card
+/// </summary>
 public class Card : IEquatable<Card>, IJsonOnDeserialized
 {
     [JsonPropertyName("id")]

@@ -19,6 +19,12 @@ public class ThrottledProcessor : IDisposable
         _processingTask = Task.Run(Process);
     }
 
+    /// <summary>
+    /// Enqueue a job with a return type.
+    /// </summary>
+    /// <param name="job">The job to process</param>
+    /// <typeparam name="T">The type to return</typeparam>
+    /// <returns>The job's returned object.</returns>
     public Task<T> EnqueueAsync<T>(Func<CancellationToken, Task<T>> job)
     {
         var tcs = new TaskCompletionSource<T>(TaskCreationOptions.RunContinuationsAsynchronously);
@@ -44,6 +50,11 @@ public class ThrottledProcessor : IDisposable
         }
     }
     
+    /// <summary>
+    /// Enqueue a job
+    /// </summary>
+    /// <param name="job">The job to process</param>
+    /// <returns>The task for this job.</returns>
     public Task EnqueueAsync(Func<CancellationToken, Task> job)
     {
         var tcs = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);

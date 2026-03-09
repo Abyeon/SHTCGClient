@@ -2,6 +2,9 @@
 
 namespace SHTCGClient.Models.Cards;
 
+/// <summary>
+/// Information about the card you rolled, it's rarity, and new roll info
+/// </summary>
 public class CardRollResponse
 {
     [JsonPropertyName("card")]

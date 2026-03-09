@@ -2,6 +2,9 @@
 
 namespace SHTCGClient.Models.Cards;
 
+/// <summary>
+/// Status information for user's accumulated rolls, max rolls, etc.
+/// </summary>
 public class RollInfo
 {
     [JsonPropertyName("rolls_available")]
