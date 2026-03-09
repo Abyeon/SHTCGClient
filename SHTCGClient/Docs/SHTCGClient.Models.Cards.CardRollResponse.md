@@ -10,3 +10,9 @@ public class CardRollResponse
 ```
 
 Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object') &#129106; CardRollResponse
+
+| Properties | |
+| :--- | :--- |
+| [Card](SHTCGClient.Models.Cards.CardRollResponse.Card.md 'SHTCGClient\.Models\.Cards\.CardRollResponse\.Card') | |
+| [Rarity](SHTCGClient.Models.Cards.CardRollResponse.Rarity.md 'SHTCGClient\.Models\.Cards\.CardRollResponse\.Rarity') | |
+| [RollInfo](SHTCGClient.Models.Cards.CardRollResponse.RollInfo.md 'SHTCGClient\.Models\.Cards\.CardRollResponse\.RollInfo') | |
