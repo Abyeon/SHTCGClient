@@ -44,7 +44,7 @@ jobs:
 
       # 6. Generate the Markdown docs directly into the 'wiki' folder
       - name: Generate Docs
-        run: xmldoc2md ./main-repo/SHTCGClient/bin/Release/net10.0/SHTCGClient.dll ./wiki
+        run: xmldoc2md ./main-repo/SHTCGClient/bin/Release/net10.0/SHTCGClient.dll -o ./wiki
 
       # 7. Commit and push the changes straight to the Wiki repo
       - name: Commit and Push to Wiki
