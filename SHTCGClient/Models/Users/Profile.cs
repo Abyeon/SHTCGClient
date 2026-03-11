@@ -7,12 +7,17 @@ namespace SHTCGClient.Models.Users;
 /// </summary>
 public class Profile : IEquatable<Profile>
 {
+    /// <inheritdoc cref="User.Id"/>
     [JsonPropertyName("id")]
     public int Id { get; init; }
 
+    /// <inheritdoc cref="User.Username"/>
     [JsonPropertyName("username")]
     public string? Username { get; init; }
     
+    /// <summary>
+    /// This User's display name.
+    /// </summary>
     [JsonPropertyName("display_name")]
     public string? DisplayName { get; init; }
     
@@ -37,20 +42,23 @@ public class Profile : IEquatable<Profile>
     [JsonPropertyName("equipped_banner_image")]
     public BannerImage? EquippedBannerImage { get; init; }
 
+    /// <inheritdoc />
     public bool Equals(Profile? other)
     {
         if (other is null) return false;
         if (ReferenceEquals(this, other)) return true;
         return Id == other.Id;
     }
-
+    
+    /// <inheritdoc />
     public override bool Equals(object? obj)
     {
         if (obj is null) return false;
         if (ReferenceEquals(this, obj)) return true;
         return obj.GetType() == GetType() && Equals((Profile)obj);
     }
-
+    
+    /// <inheritdoc />
     public override int GetHashCode()
     {
         return Id;

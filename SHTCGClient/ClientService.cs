@@ -7,6 +7,7 @@ using SHTCGClient.Models.Companions;
 using SHTCGClient.Models.Exchange;
 using SHTCGClient.Models.Seasons;
 using SHTCGClient.Models.Users;
+using SHTCGClient.Models.Users.Leaderboards;
 using SHTCGClient.Models.Vendors;
 
 namespace SHTCGClient;
@@ -177,7 +178,7 @@ public class ClientService : IAsyncDisposable
     /// Get the deck leaderboard for the current season
     /// </summary>
     /// <returns>Array of decks</returns>
-    public async Task<Deck[]?> GetLeaderboard() => await Request<Deck[]>(HttpMethod.Get, "seasons/decks/leaderboard");
+    public async Task<Deck[]?> GetSeasonLeaderboard() => await Request<Deck[]>(HttpMethod.Get, "seasons/decks/leaderboard");
     
     
     // --- Decks ---
@@ -299,6 +300,14 @@ public class ClientService : IAsyncDisposable
     /// <param name="id">The ID of the companion to equip</param>
     /// <returns>The equipped companion</returns>
     public async Task<Companion?> EquipCompanion(int id) => await Request<Companion>(HttpMethod.Post, $"companions/{id}/equip");
+    
+    /// <summary>
+    /// Fetch the leaderboard
+    /// </summary>
+    /// <param name="type">The value to sort by</param>
+    /// <param name="limit">The max entries to fetch</param>
+    /// <returns>The leaderboard sorted by input type</returns>
+    public async Task<Leaderboard?> GetLeaderboard(string type, int limit) => await Request<Leaderboard>(HttpMethod.Get, $"users/leaderboards?type={type}&limit={limit}");
 
     /// <summary>
     /// Get the User's owned cards. (This automatically de-paginates the request and gets all cards.)

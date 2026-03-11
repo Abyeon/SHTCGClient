@@ -334,19 +334,32 @@ public System.Threading.Tasks.Task<SHTCGClient.Models.Users.User[]?> GetFriends(
 [System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[User](SHTCGClient.Models.Users.User.md 'SHTCGClient\.Models\.Users\.User')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
 Array of users
 
-<a name='SHTCGClient.ClientService.GetLeaderboard()'></a>
+<a name='SHTCGClient.ClientService.GetLeaderboard(string,int)'></a>
 
-## ClientService\.GetLeaderboard\(\) Method
+## ClientService\.GetLeaderboard\(string, int\) Method
 
-Get the deck leaderboard for the current season
+Fetch the leaderboard
 
 ```csharp
-public System.Threading.Tasks.Task<SHTCGClient.Models.Seasons.Deck[]?> GetLeaderboard();
+public System.Threading.Tasks.Task<SHTCGClient.Models.Users.Leaderboards.Leaderboard?> GetLeaderboard(string type, int limit);
 ```
+#### Parameters
+
+<a name='SHTCGClient.ClientService.GetLeaderboard(string,int).type'></a>
+
+`type` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+The value to sort by
+
+<a name='SHTCGClient.ClientService.GetLeaderboard(string,int).limit'></a>
+
+`limit` [System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')
+
+The max entries to fetch
 
 #### Returns
-[System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Deck](SHTCGClient.Models.Seasons.Deck.md 'SHTCGClient\.Models\.Seasons\.Deck')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
-Array of decks
+[System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Leaderboard](SHTCGClient.Models.Users.Leaderboards.Leaderboard.md 'SHTCGClient\.Models\.Users\.Leaderboards\.Leaderboard')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
+The leaderboard sorted by input type
 
 <a name='SHTCGClient.ClientService.GetPositions()'></a>
 
@@ -382,6 +395,20 @@ The season's id
 #### Returns
 [System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Season](SHTCGClient.Models.Seasons.Season.md 'SHTCGClient\.Models\.Seasons\.Season')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
 Season
+
+<a name='SHTCGClient.ClientService.GetSeasonLeaderboard()'></a>
+
+## ClientService\.GetSeasonLeaderboard\(\) Method
+
+Get the deck leaderboard for the current season
+
+```csharp
+public System.Threading.Tasks.Task<SHTCGClient.Models.Seasons.Deck[]?> GetSeasonLeaderboard();
+```
+
+#### Returns
+[System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Deck](SHTCGClient.Models.Seasons.Deck.md 'SHTCGClient\.Models\.Seasons\.Deck')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
+Array of decks
 
 <a name='SHTCGClient.ClientService.GetUserByName(string)'></a>
 

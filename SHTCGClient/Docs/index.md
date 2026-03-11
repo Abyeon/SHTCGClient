@@ -27,9 +27,10 @@
   - **[GetDecks\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetDecks() 'SHTCGClient\.ClientService\.GetDecks\(\)')** `Method` Get the user's decks
   - **[GetExchanges\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetExchanges() 'SHTCGClient\.ClientService\.GetExchanges\(\)')** `Method` Get the currently running exchanges
   - **[GetFriends\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetFriends() 'SHTCGClient\.ClientService\.GetFriends\(\)')** `Method` Get your friends
-  - **[GetLeaderboard\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetLeaderboard() 'SHTCGClient\.ClientService\.GetLeaderboard\(\)')** `Method` Get the deck leaderboard for the current season
+  - **[GetLeaderboard\(string, int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetLeaderboard(string,int) 'SHTCGClient\.ClientService\.GetLeaderboard\(string, int\)')** `Method` Fetch the leaderboard
   - **[GetPositions\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetPositions() 'SHTCGClient\.ClientService\.GetPositions\(\)')** `Method` Get the user's positions in the exchanges
   - **[GetSeason\(int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetSeason(int) 'SHTCGClient\.ClientService\.GetSeason\(int\)')** `Method` Get season by id
+  - **[GetSeasonLeaderboard\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetSeasonLeaderboard() 'SHTCGClient\.ClientService\.GetSeasonLeaderboard\(\)')** `Method` Get the deck leaderboard for the current season
   - **[GetUserByName\(string\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetUserByName(string) 'SHTCGClient\.ClientService\.GetUserByName\(string\)')** `Method` Search for a user by name
   - **[GetVendors\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetVendors() 'SHTCGClient\.ClientService\.GetVendors\(\)')** `Method` Get the current vendors
   - **[Login\(Credentials\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Login(SHTCGClient.Credentials) 'SHTCGClient\.ClientService\.Login\(SHTCGClient\.Credentials\)')** `Method` Log in to the game
@@ -222,26 +223,40 @@
   - **[Avatar](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.Avatar 'SHTCGClient\.Models\.Users\.Profile\.Avatar')** `Property`
   - **[BannerColor](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.BannerColor 'SHTCGClient\.Models\.Users\.Profile\.BannerColor')** `Property`
   - **[Bio](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.Bio 'SHTCGClient\.Models\.Users\.Profile\.Bio')** `Property`
-  - **[DisplayName](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.DisplayName 'SHTCGClient\.Models\.Users\.Profile\.DisplayName')** `Property`
+  - **[DisplayName](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.DisplayName 'SHTCGClient\.Models\.Users\.Profile\.DisplayName')** `Property` This User's display name\.
   - **[EquippedBannerImage](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.EquippedBannerImage 'SHTCGClient\.Models\.Users\.Profile\.EquippedBannerImage')** `Property`
   - **[EquippedTitle](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.EquippedTitle 'SHTCGClient\.Models\.Users\.Profile\.EquippedTitle')** `Property`
-  - **[Id](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.Id 'SHTCGClient\.Models\.Users\.Profile\.Id')** `Property`
+  - **[Id](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.Id 'SHTCGClient\.Models\.Users\.Profile\.Id')** `Property` This User's ID
   - **[IsAnonymous](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.IsAnonymous 'SHTCGClient\.Models\.Users\.Profile\.IsAnonymous')** `Property`
   - **[ProfileColor](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.ProfileColor 'SHTCGClient\.Models\.Users\.Profile\.ProfileColor')** `Property`
-  - **[Username](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.Username 'SHTCGClient\.Models\.Users\.Profile\.Username')** `Property`
-  - **[Equals\(object\)](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.Equals(object) 'SHTCGClient\.Models\.Users\.Profile\.Equals\(object\)')** `Method`
+  - **[Username](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.Username 'SHTCGClient\.Models\.Users\.Profile\.Username')** `Property` This User's name\.
+  - **[Equals\(object\)](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.Equals(object) 'SHTCGClient\.Models\.Users\.Profile\.Equals\(object\)')** `Method` Determines whether the specified object is equal to the current object\.
   - **[Equals\(Profile\)](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.Equals(SHTCGClient.Models.Users.Profile) 'SHTCGClient\.Models\.Users\.Profile\.Equals\(SHTCGClient\.Models\.Users\.Profile\)')** `Method`
-  - **[GetHashCode\(\)](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.GetHashCode() 'SHTCGClient\.Models\.Users\.Profile\.GetHashCode\(\)')** `Method`
+  - **[GetHashCode\(\)](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.GetHashCode() 'SHTCGClient\.Models\.Users\.Profile\.GetHashCode\(\)')** `Method` Serves as the default hash function\.
 - **[User](SHTCGClient.Models.Users.User.md 'SHTCGClient\.Models\.Users\.User')** `Class` User information\.
-  - **[DateJoined](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.DateJoined 'SHTCGClient\.Models\.Users\.User\.DateJoined')** `Property`
-  - **[Email](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.Email 'SHTCGClient\.Models\.Users\.User\.Email')** `Property`
-  - **[Id](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.Id 'SHTCGClient\.Models\.Users\.User\.Id')** `Property`
-  - **[IsActive](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.IsActive 'SHTCGClient\.Models\.Users\.User\.IsActive')** `Property`
-  - **[NetWorth](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.NetWorth 'SHTCGClient\.Models\.Users\.User\.NetWorth')** `Property`
-  - **[Username](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.Username 'SHTCGClient\.Models\.Users\.User\.Username')** `Property`
-  - **[Equals\(object\)](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.Equals(object) 'SHTCGClient\.Models\.Users\.User\.Equals\(object\)')** `Method`
+  - **[DateJoined](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.DateJoined 'SHTCGClient\.Models\.Users\.User\.DateJoined')** `Property` The date this user joined the game\.
+  - **[Email](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.Email 'SHTCGClient\.Models\.Users\.User\.Email')** `Property` This user's email, if available\.
+  - **[Id](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.Id 'SHTCGClient\.Models\.Users\.User\.Id')** `Property` This User's ID
+  - **[IsActive](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.IsActive 'SHTCGClient\.Models\.Users\.User\.IsActive')** `Property` If this player is currently active
+  - **[NetWorth](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.NetWorth 'SHTCGClient\.Models\.Users\.User\.NetWorth')** `Property` This user's current balance\.
+  - **[Username](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.Username 'SHTCGClient\.Models\.Users\.User\.Username')** `Property` This User's name\.
+  - **[Equals\(object\)](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.Equals(object) 'SHTCGClient\.Models\.Users\.User\.Equals\(object\)')** `Method` Determines whether the specified object is equal to the current object\.
   - **[Equals\(User\)](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.Equals(SHTCGClient.Models.Users.User) 'SHTCGClient\.Models\.Users\.User\.Equals\(SHTCGClient\.Models\.Users\.User\)')** `Method`
-  - **[GetHashCode\(\)](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.GetHashCode() 'SHTCGClient\.Models\.Users\.User\.GetHashCode\(\)')** `Method`
+  - **[GetHashCode\(\)](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.GetHashCode() 'SHTCGClient\.Models\.Users\.User\.GetHashCode\(\)')** `Method` Serves as the default hash function\.
+
+<a name='SHTCGClient.Models.Users.Leaderboards'></a>
+
+## SHTCGClient\.Models\.Users\.Leaderboards Namespace
+- **[Leaderboard](SHTCGClient.Models.Users.Leaderboards.Leaderboard.md 'SHTCGClient\.Models\.Users\.Leaderboards\.Leaderboard')** `Class` Player leaderboard for net worth / total cards
+  - **[Entries](SHTCGClient.Models.Users.Leaderboards.Leaderboard.md#SHTCGClient.Models.Users.Leaderboards.Leaderboard.Entries 'SHTCGClient\.Models\.Users\.Leaderboards\.Leaderboard\.Entries')** `Property` Array of player rankings, sorted by the LeaderboardType
+  - **[LeaderboardType](SHTCGClient.Models.Users.Leaderboards.Leaderboard.md#SHTCGClient.Models.Users.Leaderboards.Leaderboard.LeaderboardType 'SHTCGClient\.Models\.Users\.Leaderboards\.Leaderboard\.LeaderboardType')** `Property` The type of leaderboard
+- **[LeaderboardEntry](SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.md 'SHTCGClient\.Models\.Users\.Leaderboards\.LeaderboardEntry')** `Class` Player rank entry on the leaderboard
+  - **[LeaderboardName](SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.md#SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.LeaderboardName 'SHTCGClient\.Models\.Users\.Leaderboards\.LeaderboardEntry\.LeaderboardName')** `Property` This player's display name
+  - **[NetWorth](SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.md#SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.NetWorth 'SHTCGClient\.Models\.Users\.Leaderboards\.LeaderboardEntry\.NetWorth')** `Property` This user's current balance\.
+  - **[Rank](SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.md#SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.Rank 'SHTCGClient\.Models\.Users\.Leaderboards\.LeaderboardEntry\.Rank')** `Property` This player's position on the leaderboard
+  - **[TotalCards](SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.md#SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.TotalCards 'SHTCGClient\.Models\.Users\.Leaderboards\.LeaderboardEntry\.TotalCards')** `Property` This player's total owned cards\.
+  - **[UserId](SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.md#SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.UserId 'SHTCGClient\.Models\.Users\.Leaderboards\.LeaderboardEntry\.UserId')** `Property` This User's ID
+  - **[Username](SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.md#SHTCGClient.Models.Users.Leaderboards.LeaderboardEntry.Username 'SHTCGClient\.Models\.Users\.Leaderboards\.LeaderboardEntry\.Username')** `Property` This User's name\.
 
 <a name='SHTCGClient.Models.Vendors'></a>
 
