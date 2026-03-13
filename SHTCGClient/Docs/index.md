@@ -28,6 +28,7 @@
   - **[GetExchanges\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetExchanges() 'SHTCGClient\.ClientService\.GetExchanges\(\)')** `Method` Get the currently running exchanges
   - **[GetFriends\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetFriends() 'SHTCGClient\.ClientService\.GetFriends\(\)')** `Method` Get your friends
   - **[GetLeaderboard\(string, int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetLeaderboard(string,int) 'SHTCGClient\.ClientService\.GetLeaderboard\(string, int\)')** `Method` Fetch the leaderboard
+  - **[GetLeaderboardDeckCards\(int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetLeaderboardDeckCards(int) 'SHTCGClient\.ClientService\.GetLeaderboardDeckCards\(int\)')** `Method` Get the cards for a deck on the season leaderboard\.
   - **[GetPositions\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetPositions() 'SHTCGClient\.ClientService\.GetPositions\(\)')** `Method` Get the user's positions in the exchanges
   - **[GetSeason\(int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetSeason(int) 'SHTCGClient\.ClientService\.GetSeason\(int\)')** `Method` Get season by id
   - **[GetSeasonLeaderboard\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetSeasonLeaderboard() 'SHTCGClient\.ClientService\.GetSeasonLeaderboard\(\)')** `Method` Get the deck leaderboard for the current season

@@ -5,6 +5,7 @@ using SHTCGClient.Models;
 using SHTCGClient.Models.Cards;
 using SHTCGClient.Models.Companions;
 using SHTCGClient.Models.Exchange;
+using SHTCGClient.Models.Features;
 using SHTCGClient.Models.Seasons;
 using SHTCGClient.Models.Users;
 using SHTCGClient.Models.Users.Leaderboards;
@@ -87,6 +88,8 @@ public class ClientService : IAsyncDisposable
         if (!result) throw new Exception("Handshake failed");
     }
 
+    #region Auth
+
     private async Task<bool> Handshake()
     {
         var response = await Client.GetAsync(ApiUrl + "users/csrf");
@@ -122,9 +125,11 @@ public class ClientService : IAsyncDisposable
     }
 
     private async Task<bool> Logout() => await Request(HttpMethod.Post, "users/auth/logout");
+
+    #endregion
     
-    // --- Cards/rolls ---
-    
+    #region Rolling
+
     /// <summary>
     /// Get the current roll status
     /// </summary>
@@ -143,9 +148,11 @@ public class ClientService : IAsyncDisposable
     /// <param name="count">Amount of rolls to fetch</param>
     /// <returns>Array of cards</returns>
     public async Task<Card[]?> RollHistory(int count) => await Request<Card[]>(HttpMethod.Get, $"cards/roll-history?count={count}");
+
+    #endregion
     
-    // --- Social ---
-    
+    #region Social
+
     /// <summary>
     /// Get your friends
     /// </summary>
@@ -158,9 +165,11 @@ public class ClientService : IAsyncDisposable
     /// <param name="name">The username to search for</param>
     /// <returns>Array of users</returns>
     public async Task<User[]?> GetUserByName(string name) => await Request<User[]>(HttpMethod.Get, $"users/users?search={name}");
+
+    #endregion
     
-    // --- Season/leaderboard ---
-    
+    #region Season
+
     /// <summary>
     /// Get season by id
     /// </summary>
@@ -180,9 +189,17 @@ public class ClientService : IAsyncDisposable
     /// <returns>Array of decks</returns>
     public async Task<Deck[]?> GetSeasonLeaderboard() => await Request<Deck[]>(HttpMethod.Get, "seasons/decks/leaderboard");
     
-    
-    // --- Decks ---
-    
+    /// <summary>
+    /// Get the cards for a deck on the season leaderboard.
+    /// </summary>
+    /// <param name="id">The Deck ID</param>
+    /// <returns>Array of cards</returns>
+    public async Task<Card[]?> GetLeaderboardDeckCards(int id) => await Request<Card[]>(HttpMethod.Get, $"seasons/decks/leaderboard/{id}/cards");
+
+    #endregion
+
+    #region Decks
+
     /// <summary>
     /// Get the user's decks
     /// </summary>
@@ -217,9 +234,11 @@ public class ClientService : IAsyncDisposable
         
         await Request(HttpMethod.Post,  $"seasons/decks/{deckId}/cards", cardData);
     }
+
+    #endregion
     
-    // --- Exchanges ---
-    
+    #region Exchanges
+
     /// <summary>
     /// Get the currently running exchanges
     /// </summary>
@@ -240,9 +259,11 @@ public class ClientService : IAsyncDisposable
     /// </summary>
     /// <returns>Array of positions</returns>
     public async Task<Position[]?> GetPositions() => await Request<Position[]>(HttpMethod.Get, "exchange/positions");
+
+    #endregion
     
-    // --- Stores ---
-    
+    #region Vendors
+
     /// <summary>
     /// Sell a card
     /// </summary>
@@ -273,9 +294,11 @@ public class ClientService : IAsyncDisposable
     /// </summary>
     /// <returns>Array of vendors</returns>
     public async Task<Vendor[]?> GetVendors() => await Request<Vendor[]>(HttpMethod.Get, "vendors/list");
+
+    #endregion
     
-    // --- Companions ---
-    
+    #region Companions
+
     /// <summary>
     /// Get the user's owned companions
     /// </summary>
@@ -300,6 +323,8 @@ public class ClientService : IAsyncDisposable
     /// <param name="id">The ID of the companion to equip</param>
     /// <returns>The equipped companion</returns>
     public async Task<Companion?> EquipCompanion(int id) => await Request<Companion>(HttpMethod.Post, $"companions/{id}/equip");
+
+    #endregion
     
     /// <summary>
     /// Fetch the leaderboard
@@ -331,6 +356,23 @@ public class ClientService : IAsyncDisposable
         
         return cards.ToArray();
     }
+    
+    #region Features
+
+    /// <summary>
+    /// Get the current features available for voting.
+    /// Check if the user is able to vote with <see cref="GetVoteStatus"/> before attempting to vote.
+    /// </summary>
+    /// <returns>Array of features</returns>
+    public async Task<Feature[]?> GetFeatures() => await Request<Feature[]>(HttpMethod.Get, "features");
+    
+    /// <summary>
+    /// Gets the users voting eligibility and the next time they may vote.
+    /// </summary>
+    /// <returns>User's VoteStatus</returns>
+    public async Task<VoteStatus?> GetVoteStatus() => await Request<VoteStatus>(HttpMethod.Get, "features/vote-status");
+
+    #endregion
 
     private string GetCsrf()
     {

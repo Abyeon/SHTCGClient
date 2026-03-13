@@ -361,6 +361,27 @@ The max entries to fetch
 [System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Leaderboard](SHTCGClient.Models.Users.Leaderboards.Leaderboard.md 'SHTCGClient\.Models\.Users\.Leaderboards\.Leaderboard')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
 The leaderboard sorted by input type
 
+<a name='SHTCGClient.ClientService.GetLeaderboardDeckCards(int)'></a>
+
+## ClientService\.GetLeaderboardDeckCards\(int\) Method
+
+Get the cards for a deck on the season leaderboard\.
+
+```csharp
+public System.Threading.Tasks.Task<SHTCGClient.Models.Cards.Card[]?> GetLeaderboardDeckCards(int id);
+```
+#### Parameters
+
+<a name='SHTCGClient.ClientService.GetLeaderboardDeckCards(int).id'></a>
+
+`id` [System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')
+
+The Deck ID
+
+#### Returns
+[System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Card](SHTCGClient.Models.Cards.Card.md 'SHTCGClient\.Models\.Cards\.Card')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
+Array of cards
+
 <a name='SHTCGClient.ClientService.GetPositions()'></a>
 
 ## ClientService\.GetPositions\(\) Method
