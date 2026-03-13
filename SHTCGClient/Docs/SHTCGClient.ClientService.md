@@ -320,6 +320,21 @@ public System.Threading.Tasks.Task<SHTCGClient.Models.Exchange.Exchange[]?> GetE
 [System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Exchange](SHTCGClient.Models.Exchange.Exchange.md 'SHTCGClient\.Models\.Exchange\.Exchange')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
 Array of exchanges
 
+<a name='SHTCGClient.ClientService.GetFeatures()'></a>
+
+## ClientService\.GetFeatures\(\) Method
+
+Get the current features available for voting\.
+Check if the user is able to vote with [GetVoteStatus\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetVoteStatus() 'SHTCGClient\.ClientService\.GetVoteStatus\(\)') before attempting to vote\.
+
+```csharp
+public System.Threading.Tasks.Task<SHTCGClient.Models.Features.Feature[]?> GetFeatures();
+```
+
+#### Returns
+[System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Feature](SHTCGClient.Models.Features.Feature.md 'SHTCGClient\.Models\.Features\.Feature')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
+Array of features
+
 <a name='SHTCGClient.ClientService.GetFriends()'></a>
 
 ## ClientService\.GetFriends\(\) Method
@@ -465,6 +480,20 @@ public System.Threading.Tasks.Task<SHTCGClient.Models.Vendors.Vendor[]?> GetVend
 #### Returns
 [System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Vendor](SHTCGClient.Models.Vendors.Vendor.md 'SHTCGClient\.Models\.Vendors\.Vendor')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
 Array of vendors
+
+<a name='SHTCGClient.ClientService.GetVoteStatus()'></a>
+
+## ClientService\.GetVoteStatus\(\) Method
+
+Gets the users voting eligibility and the next time they may vote\.
+
+```csharp
+public System.Threading.Tasks.Task<SHTCGClient.Models.Features.VoteStatus?> GetVoteStatus();
+```
+
+#### Returns
+[System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[VoteStatus](SHTCGClient.Models.Features.VoteStatus.md 'SHTCGClient\.Models\.Features\.VoteStatus')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
+User's VoteStatus
 
 <a name='SHTCGClient.ClientService.Login(SHTCGClient.Credentials)'></a>
 

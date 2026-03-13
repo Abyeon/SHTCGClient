@@ -26,6 +26,7 @@
   - **[GetDeckCards\(int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetDeckCards(int) 'SHTCGClient\.ClientService\.GetDeckCards\(int\)')** `Method` Get the cards for a deck by id
   - **[GetDecks\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetDecks() 'SHTCGClient\.ClientService\.GetDecks\(\)')** `Method` Get the user's decks
   - **[GetExchanges\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetExchanges() 'SHTCGClient\.ClientService\.GetExchanges\(\)')** `Method` Get the currently running exchanges
+  - **[GetFeatures\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetFeatures() 'SHTCGClient\.ClientService\.GetFeatures\(\)')** `Method` Get the current features available for voting\. Check if the user is able to vote with [GetVoteStatus\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetVoteStatus() 'SHTCGClient\.ClientService\.GetVoteStatus\(\)') before attempting to vote\.
   - **[GetFriends\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetFriends() 'SHTCGClient\.ClientService\.GetFriends\(\)')** `Method` Get your friends
   - **[GetLeaderboard\(string, int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetLeaderboard(string,int) 'SHTCGClient\.ClientService\.GetLeaderboard\(string, int\)')** `Method` Fetch the leaderboard
   - **[GetLeaderboardDeckCards\(int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetLeaderboardDeckCards(int) 'SHTCGClient\.ClientService\.GetLeaderboardDeckCards\(int\)')** `Method` Get the cards for a deck on the season leaderboard\.
@@ -34,6 +35,7 @@
   - **[GetSeasonLeaderboard\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetSeasonLeaderboard() 'SHTCGClient\.ClientService\.GetSeasonLeaderboard\(\)')** `Method` Get the deck leaderboard for the current season
   - **[GetUserByName\(string\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetUserByName(string) 'SHTCGClient\.ClientService\.GetUserByName\(string\)')** `Method` Search for a user by name
   - **[GetVendors\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetVendors() 'SHTCGClient\.ClientService\.GetVendors\(\)')** `Method` Get the current vendors
+  - **[GetVoteStatus\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetVoteStatus() 'SHTCGClient\.ClientService\.GetVoteStatus\(\)')** `Method` Gets the users voting eligibility and the next time they may vote\.
   - **[Login\(Credentials\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Login(SHTCGClient.Credentials) 'SHTCGClient\.ClientService\.Login\(SHTCGClient\.Credentials\)')** `Method` Log in to the game
   - **[Login\(string, string\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Login(string,string) 'SHTCGClient\.ClientService\.Login\(string, string\)')** `Method` Log in to the game
   - **[Request\(HttpMethod, string\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Request(System.Net.Http.HttpMethod,string) 'SHTCGClient\.ClientService\.Request\(System\.Net\.Http\.HttpMethod, string\)')** `Method` A helper method for sending a request to the API
@@ -175,6 +177,23 @@
   - **[BaseCardName](SHTCGClient.Models.Exchange.Symbol.md#SHTCGClient.Models.Exchange.Symbol.BaseCardName 'SHTCGClient\.Models\.Exchange\.Symbol\.BaseCardName')** `Property`
   - **[Id](SHTCGClient.Models.Exchange.Symbol.md#SHTCGClient.Models.Exchange.Symbol.Id 'SHTCGClient\.Models\.Exchange\.Symbol\.Id')** `Property`
   - **[Name](SHTCGClient.Models.Exchange.Symbol.md#SHTCGClient.Models.Exchange.Symbol.Name 'SHTCGClient\.Models\.Exchange\.Symbol\.Name')** `Property`
+
+<a name='SHTCGClient.Models.Features'></a>
+
+## SHTCGClient\.Models\.Features Namespace
+- **[Feature](SHTCGClient.Models.Features.Feature.md 'SHTCGClient\.Models\.Features\.Feature')** `Class` Represents a voting object for a potential new feature to the game\.
+  - **[CreatedAt](SHTCGClient.Models.Features.Feature.md#SHTCGClient.Models.Features.Feature.CreatedAt 'SHTCGClient\.Models\.Features\.Feature\.CreatedAt')** `Property` The date this feature was added to the voting system\.
+  - **[Description](SHTCGClient.Models.Features.Feature.md#SHTCGClient.Models.Features.Feature.Description 'SHTCGClient\.Models\.Features\.Feature\.Description')** `Property` The description of what this feature will accomplish\.
+  - **[Id](SHTCGClient.Models.Features.Feature.md#SHTCGClient.Models.Features.Feature.Id 'SHTCGClient\.Models\.Features\.Feature\.Id')** `Property` Identifier of this feature\.
+  - **[Name](SHTCGClient.Models.Features.Feature.md#SHTCGClient.Models.Features.Feature.Name 'SHTCGClient\.Models\.Features\.Feature\.Name')** `Property` This feature's name\.
+  - **[UserHasVoted](SHTCGClient.Models.Features.Feature.md#SHTCGClient.Models.Features.Feature.UserHasVoted 'SHTCGClient\.Models\.Features\.Feature\.UserHasVoted')** `Property` Whether the user has voted for this feature\.
+  - **[VoteCount](SHTCGClient.Models.Features.Feature.md#SHTCGClient.Models.Features.Feature.VoteCount 'SHTCGClient\.Models\.Features\.Feature\.VoteCount')** `Property` How many votes ths feature has received\.
+- **[VoteStatus](SHTCGClient.Models.Features.VoteStatus.md 'SHTCGClient\.Models\.Features\.VoteStatus')** `Class` Information on when the user may vote for a feature again\.
+  - **[CanVote](SHTCGClient.Models.Features.VoteStatus.md#SHTCGClient.Models.Features.VoteStatus.CanVote 'SHTCGClient\.Models\.Features\.VoteStatus\.CanVote')** `Property` Whether the user may vote currently
+  - **[DaysUntilNextVote](SHTCGClient.Models.Features.VoteStatus.md#SHTCGClient.Models.Features.VoteStatus.DaysUntilNextVote 'SHTCGClient\.Models\.Features\.VoteStatus\.DaysUntilNextVote')** `Property` The days until the user is able to vote again
+  - **[HoursUntilNextVote](SHTCGClient.Models.Features.VoteStatus.md#SHTCGClient.Models.Features.VoteStatus.HoursUntilNextVote 'SHTCGClient\.Models\.Features\.VoteStatus\.HoursUntilNextVote')** `Property` The hours until the user is able to vote again
+  - **[LastVoteAt](SHTCGClient.Models.Features.VoteStatus.md#SHTCGClient.Models.Features.VoteStatus.LastVoteAt 'SHTCGClient\.Models\.Features\.VoteStatus\.LastVoteAt')** `Property` The last time the user voted
+  - **[NextVoteAt](SHTCGClient.Models.Features.VoteStatus.md#SHTCGClient.Models.Features.VoteStatus.NextVoteAt 'SHTCGClient\.Models\.Features\.VoteStatus\.NextVoteAt')** `Property` The next time the user may vote
 
 <a name='SHTCGClient.Models.Seasons'></a>
 
