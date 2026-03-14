@@ -40,7 +40,7 @@ public class Companion : IEquatable<Companion>
     /// </summary>
     /// <param name="client">Your client</param>
     /// <returns>The equipped companion (this).</returns>
-    public async Task<Companion?> Equip(ClientService client) => await client.EquipCompanion(Id);
+    public async Task<Companion?> Equip(ClientService client) => await client.Companions.EquipCompanion(Id);
 
     public bool Equals(Companion? other)
     {

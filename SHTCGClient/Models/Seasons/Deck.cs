@@ -49,7 +49,7 @@ public class Deck : IEquatable<Deck>
     /// <param name="cardId">ID of the card to remove</param>
     public async Task Remove(ClientService client, int cardId)
     {
-        await client.DeleteDeckCard(Id, cardId);
+        await client.Seasons.Decks.DeleteCard(Id, cardId);
     }
     
     /// <summary>
@@ -66,7 +66,7 @@ public class Deck : IEquatable<Deck>
     /// <param name="cardId">ID of the card to add</param>
     public async Task Add(ClientService client, int cardId)
     {
-        await client.AddDeckCard(Id, cardId);
+        await client.Seasons.Decks.AddCard(Id, cardId);
     }
     
     /// <summary>

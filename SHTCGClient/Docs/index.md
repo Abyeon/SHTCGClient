@@ -9,45 +9,24 @@
 - **[ClientService](SHTCGClient.ClientService.md 'SHTCGClient\.ClientService')** `Class` The main service for interacting with the Something Happened TCG API\.
   - **[ClientService\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.ClientService() 'SHTCGClient\.ClientService\.ClientService\(\)')** `Constructor`
   - **[ClientService\(ThrottledProcessor\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.ClientService(SHTCGClient.ThrottledProcessor) 'SHTCGClient\.ClientService\.ClientService\(SHTCGClient\.ThrottledProcessor\)')** `Constructor`
+  - **[Auth](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Auth 'SHTCGClient\.ClientService\.Auth')** `Field` Login, logout, etc
+  - **[Cards](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Cards 'SHTCGClient\.ClientService\.Cards')** `Field` Roll, roll status, user's cards, etc
   - **[Client](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Client 'SHTCGClient\.ClientService\.Client')** `Field`
+  - **[Companions](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Companions 'SHTCGClient\.ClientService\.Companions')** `Field` Equip, unequip companions, etc\.
   - **[CookieContainer](SHTCGClient.ClientService.md#SHTCGClient.ClientService.CookieContainer 'SHTCGClient\.ClientService\.CookieContainer')** `Field`
+  - **[Exchange](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Exchange 'SHTCGClient\.ClientService\.Exchange')** `Field` Buy, sell, view stocks, etc\.
+  - **[Features](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Features 'SHTCGClient\.ClientService\.Features')** `Field` Feature voting
   - **[Handler](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Handler 'SHTCGClient\.ClientService\.Handler')** `Field`
   - **[LoggedIn](SHTCGClient.ClientService.md#SHTCGClient.ClientService.LoggedIn 'SHTCGClient\.ClientService\.LoggedIn')** `Field` If the client is logged in or not
   - **[Processor](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Processor 'SHTCGClient\.ClientService\.Processor')** `Field`
-  - **[AddDeckCard\(int, int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.AddDeckCard(int,int) 'SHTCGClient\.ClientService\.AddDeckCard\(int, int\)')** `Method` Add a card to a deck
-  - **[DeleteDeckCard\(int, int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.DeleteDeckCard(int,int) 'SHTCGClient\.ClientService\.DeleteDeckCard\(int, int\)')** `Method` Delete a card in a deck
+  - **[Seasons](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Seasons 'SHTCGClient\.ClientService\.Seasons')** `Field` Season information, deck management, etc\.
+  - **[Users](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Users 'SHTCGClient\.ClientService\.Users')** `Field` Socials, net worth leaderboard, etc\.
+  - **[Vendors](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Vendors 'SHTCGClient\.ClientService\.Vendors')** `Field` Buy and sell cards/companions\.
   - **[DisposeAsync\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.DisposeAsync() 'SHTCGClient\.ClientService\.DisposeAsync\(\)')** `Method` Async disposal\. Put the ClientService in an "await using" block for this to automatically clean up\.
-  - **[EquipCompanion\(int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.EquipCompanion(int) 'SHTCGClient\.ClientService\.EquipCompanion\(int\)')** `Method` Equip a companion by ID
-  - **[GetActiveCompanion\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetActiveCompanion() 'SHTCGClient\.ClientService\.GetActiveCompanion\(\)')** `Method` Get the user's currently active companion
-  - **[GetCandles\(int, int, int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetCandles(int,int,int) 'SHTCGClient\.ClientService\.GetCandles\(int, int, int\)')** `Method` Get the candle graph for an exchange
-  - **[GetCards\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetCards() 'SHTCGClient\.ClientService\.GetCards\(\)')** `Method` Get the User's owned cards\. \(This automatically de\-paginates the request and gets all cards\.\)
-  - **[GetCompanions\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetCompanions() 'SHTCGClient\.ClientService\.GetCompanions\(\)')** `Method` Get the user's owned companions
-  - **[GetCurrentSeason\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetCurrentSeason() 'SHTCGClient\.ClientService\.GetCurrentSeason\(\)')** `Method` Get the currently active season
-  - **[GetDeckCards\(int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetDeckCards(int) 'SHTCGClient\.ClientService\.GetDeckCards\(int\)')** `Method` Get the cards for a deck by id
-  - **[GetDecks\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetDecks() 'SHTCGClient\.ClientService\.GetDecks\(\)')** `Method` Get the user's decks
-  - **[GetExchanges\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetExchanges() 'SHTCGClient\.ClientService\.GetExchanges\(\)')** `Method` Get the currently running exchanges
-  - **[GetFeatures\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetFeatures() 'SHTCGClient\.ClientService\.GetFeatures\(\)')** `Method` Get the current features available for voting\. Check if the user is able to vote with [GetVoteStatus\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetVoteStatus() 'SHTCGClient\.ClientService\.GetVoteStatus\(\)') before attempting to vote\.
-  - **[GetFriends\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetFriends() 'SHTCGClient\.ClientService\.GetFriends\(\)')** `Method` Get your friends
-  - **[GetLeaderboard\(string, int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetLeaderboard(string,int) 'SHTCGClient\.ClientService\.GetLeaderboard\(string, int\)')** `Method` Fetch the leaderboard
-  - **[GetLeaderboardDeckCards\(int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetLeaderboardDeckCards(int) 'SHTCGClient\.ClientService\.GetLeaderboardDeckCards\(int\)')** `Method` Get the cards for a deck on the season leaderboard\.
-  - **[GetPositions\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetPositions() 'SHTCGClient\.ClientService\.GetPositions\(\)')** `Method` Get the user's positions in the exchanges
-  - **[GetSeason\(int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetSeason(int) 'SHTCGClient\.ClientService\.GetSeason\(int\)')** `Method` Get season by id
-  - **[GetSeasonLeaderboard\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetSeasonLeaderboard() 'SHTCGClient\.ClientService\.GetSeasonLeaderboard\(\)')** `Method` Get the deck leaderboard for the current season
-  - **[GetUserByName\(string\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetUserByName(string) 'SHTCGClient\.ClientService\.GetUserByName\(string\)')** `Method` Search for a user by name
-  - **[GetVendors\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetVendors() 'SHTCGClient\.ClientService\.GetVendors\(\)')** `Method` Get the current vendors
-  - **[GetVoteStatus\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.GetVoteStatus() 'SHTCGClient\.ClientService\.GetVoteStatus\(\)')** `Method` Gets the users voting eligibility and the next time they may vote\.
-  - **[Login\(Credentials\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Login(SHTCGClient.Credentials) 'SHTCGClient\.ClientService\.Login\(SHTCGClient\.Credentials\)')** `Method` Log in to the game
-  - **[Login\(string, string\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Login(string,string) 'SHTCGClient\.ClientService\.Login\(string, string\)')** `Method` Log in to the game
   - **[Request\(HttpMethod, string\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Request(System.Net.Http.HttpMethod,string) 'SHTCGClient\.ClientService\.Request\(System\.Net\.Http\.HttpMethod, string\)')** `Method` A helper method for sending a request to the API
   - **[Request\(HttpMethod, string, object\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Request(System.Net.Http.HttpMethod,string,object) 'SHTCGClient\.ClientService\.Request\(System\.Net\.Http\.HttpMethod, string, object\)')** `Method` A helper method for sending a request to the API
   - **[Request&lt;T&gt;\(HttpMethod, string\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Request_T_(System.Net.Http.HttpMethod,string) 'SHTCGClient\.ClientService\.Request\<T\>\(System\.Net\.Http\.HttpMethod, string\)')** `Method` A helper method for sending a request to the API
   - **[Request&lt;T&gt;\(HttpMethod, string, object\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Request_T_(System.Net.Http.HttpMethod,string,object) 'SHTCGClient\.ClientService\.Request\<T\>\(System\.Net\.Http\.HttpMethod, string, object\)')** `Method` A helper method for sending a request to the API
-  - **[Roll\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Roll() 'SHTCGClient\.ClientService\.Roll\(\)')** `Method` Roll for a card
-  - **[RollHistory\(int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.RollHistory(int) 'SHTCGClient\.ClientService\.RollHistory\(int\)')** `Method` Get the last x rolls
-  - **[SellCard\(int, int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.SellCard(int,int) 'SHTCGClient\.ClientService\.SellCard\(int, int\)')** `Method` Sell a card
-  - **[SellCards\(int\[\], int\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.SellCards(int[],int) 'SHTCGClient\.ClientService\.SellCards\(int\[\], int\)')** `Method` Sell cards
-  - **[Status\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Status() 'SHTCGClient\.ClientService\.Status\(\)')** `Method` Get the current roll status
-  - **[UnequipCompanion\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.UnequipCompanion() 'SHTCGClient\.ClientService\.UnequipCompanion\(\)')** `Method` Unequip the currently active companion
 - **[ThrottledProcessor](SHTCGClient.ThrottledProcessor.md 'SHTCGClient\.ThrottledProcessor')** `Class` Throttled task processor utilizing threading\.channels\.
   - **[ThrottledProcessor\(TimeSpan\)](SHTCGClient.ThrottledProcessor.md#SHTCGClient.ThrottledProcessor.ThrottledProcessor(System.TimeSpan) 'SHTCGClient\.ThrottledProcessor\.ThrottledProcessor\(System\.TimeSpan\)')** `Constructor`
   - **[Dispose\(\)](SHTCGClient.ThrottledProcessor.md#SHTCGClient.ThrottledProcessor.Dispose() 'SHTCGClient\.ThrottledProcessor\.Dispose\(\)')** `Method`
@@ -56,6 +35,60 @@
 - **[Credentials](SHTCGClient.Credentials.md 'SHTCGClient\.Credentials')** `Struct` An object for storing user login credentials\.
   - **[Password](SHTCGClient.Credentials.md#SHTCGClient.Credentials.Password 'SHTCGClient\.Credentials\.Password')** `Property` Your password
   - **[Username](SHTCGClient.Credentials.md#SHTCGClient.Credentials.Username 'SHTCGClient\.Credentials\.Username')** `Property` Your username
+
+<a name='SHTCGClient.Endpoints'></a>
+
+## SHTCGClient\.Endpoints Namespace
+- **[AuthEndpoints](SHTCGClient.Endpoints.AuthEndpoints.md 'SHTCGClient\.Endpoints\.AuthEndpoints')** `Class` Class for interacting with the auth endpoint
+  - **[AuthEndpoints\(ClientService\)](SHTCGClient.Endpoints.AuthEndpoints.md#SHTCGClient.Endpoints.AuthEndpoints.AuthEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.AuthEndpoints\.AuthEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the auth endpoint
+  - **[Login\(Credentials\)](SHTCGClient.Endpoints.AuthEndpoints.md#SHTCGClient.Endpoints.AuthEndpoints.Login(SHTCGClient.Credentials) 'SHTCGClient\.Endpoints\.AuthEndpoints\.Login\(SHTCGClient\.Credentials\)')** `Method` Log in to the game
+  - **[Login\(string, string\)](SHTCGClient.Endpoints.AuthEndpoints.md#SHTCGClient.Endpoints.AuthEndpoints.Login(string,string) 'SHTCGClient\.Endpoints\.AuthEndpoints\.Login\(string, string\)')** `Method` Log in to the game
+- **[CardsEndpoints](SHTCGClient.Endpoints.CardsEndpoints.md 'SHTCGClient\.Endpoints\.CardsEndpoints')** `Class` Class for interacting with the Cards endpoint
+  - **[CardsEndpoints\(ClientService\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.CardsEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.CardsEndpoints\.CardsEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the Cards endpoint
+  - **[BaseCards\(\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.BaseCards() 'SHTCGClient\.Endpoints\.CardsEndpoints\.BaseCards\(\)')** `Method` Get all the base versions of the cards in the game\.
+  - **[MyCards\(\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.MyCards() 'SHTCGClient\.Endpoints\.CardsEndpoints\.MyCards\(\)')** `Method` Get the User's owned cards\. \(This automatically de\-paginates the request and gets all cards\.\)
+  - **[PlayerCards\(int\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.PlayerCards(int) 'SHTCGClient\.Endpoints\.CardsEndpoints\.PlayerCards\(int\)')** `Method` Get a player's owned cards\. \(This automatically de\-paginates the request and gets all cards\.\)
+  - **[Roll\(\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.Roll() 'SHTCGClient\.Endpoints\.CardsEndpoints\.Roll\(\)')** `Method` Roll for a card
+  - **[RollHistory\(int\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.RollHistory(int) 'SHTCGClient\.Endpoints\.CardsEndpoints\.RollHistory\(int\)')** `Method` Get the last x rolls
+  - **[Status\(\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.Status() 'SHTCGClient\.Endpoints\.CardsEndpoints\.Status\(\)')** `Method` Get the current roll status
+- **[CompanionsEndpoints](SHTCGClient.Endpoints.CompanionsEndpoints.md 'SHTCGClient\.Endpoints\.CompanionsEndpoints')** `Class` Class for interacting with the companions endpoint
+  - **[CompanionsEndpoints\(ClientService\)](SHTCGClient.Endpoints.CompanionsEndpoints.md#SHTCGClient.Endpoints.CompanionsEndpoints.CompanionsEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.CompanionsEndpoints\.CompanionsEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the companions endpoint
+  - **[EquipCompanion\(int\)](SHTCGClient.Endpoints.CompanionsEndpoints.md#SHTCGClient.Endpoints.CompanionsEndpoints.EquipCompanion(int) 'SHTCGClient\.Endpoints\.CompanionsEndpoints\.EquipCompanion\(int\)')** `Method` Equip a companion by ID
+  - **[GetActiveCompanion\(\)](SHTCGClient.Endpoints.CompanionsEndpoints.md#SHTCGClient.Endpoints.CompanionsEndpoints.GetActiveCompanion() 'SHTCGClient\.Endpoints\.CompanionsEndpoints\.GetActiveCompanion\(\)')** `Method` Get the user's currently active companion
+  - **[GetCompanions\(\)](SHTCGClient.Endpoints.CompanionsEndpoints.md#SHTCGClient.Endpoints.CompanionsEndpoints.GetCompanions() 'SHTCGClient\.Endpoints\.CompanionsEndpoints\.GetCompanions\(\)')** `Method` Get the user's owned companions
+  - **[UnequipCompanion\(\)](SHTCGClient.Endpoints.CompanionsEndpoints.md#SHTCGClient.Endpoints.CompanionsEndpoints.UnequipCompanion() 'SHTCGClient\.Endpoints\.CompanionsEndpoints\.UnequipCompanion\(\)')** `Method` Unequip the currently active companion
+- **[DecksEndpoints](SHTCGClient.Endpoints.DecksEndpoints.md 'SHTCGClient\.Endpoints\.DecksEndpoints')** `Class` Class for interacting with the seasons/decks endpoint\.
+  - **[DecksEndpoints\(ClientService\)](SHTCGClient.Endpoints.DecksEndpoints.md#SHTCGClient.Endpoints.DecksEndpoints.DecksEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.DecksEndpoints\.DecksEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the seasons/decks endpoint\.
+  - **[AddCard\(int, int\)](SHTCGClient.Endpoints.DecksEndpoints.md#SHTCGClient.Endpoints.DecksEndpoints.AddCard(int,int) 'SHTCGClient\.Endpoints\.DecksEndpoints\.AddCard\(int, int\)')** `Method` Add a card to a deck
+  - **[DeleteCard\(int, int\)](SHTCGClient.Endpoints.DecksEndpoints.md#SHTCGClient.Endpoints.DecksEndpoints.DeleteCard(int,int) 'SHTCGClient\.Endpoints\.DecksEndpoints\.DeleteCard\(int, int\)')** `Method` Delete a card in a deck
+  - **[GetCards\(int\)](SHTCGClient.Endpoints.DecksEndpoints.md#SHTCGClient.Endpoints.DecksEndpoints.GetCards(int) 'SHTCGClient\.Endpoints\.DecksEndpoints\.GetCards\(int\)')** `Method` Get the cards for a deck by id
+  - **[GetDecks\(\)](SHTCGClient.Endpoints.DecksEndpoints.md#SHTCGClient.Endpoints.DecksEndpoints.GetDecks() 'SHTCGClient\.Endpoints\.DecksEndpoints\.GetDecks\(\)')** `Method` Get the user's decks
+  - **[GetLeaderboardDeckCards\(int\)](SHTCGClient.Endpoints.DecksEndpoints.md#SHTCGClient.Endpoints.DecksEndpoints.GetLeaderboardDeckCards(int) 'SHTCGClient\.Endpoints\.DecksEndpoints\.GetLeaderboardDeckCards\(int\)')** `Method` Get the cards for a deck on the season leaderboard\.
+  - **[Leaderboard\(\)](SHTCGClient.Endpoints.DecksEndpoints.md#SHTCGClient.Endpoints.DecksEndpoints.Leaderboard() 'SHTCGClient\.Endpoints\.DecksEndpoints\.Leaderboard\(\)')** `Method` Get the deck leaderboard for the current season
+- **[ExchangeEndpoints](SHTCGClient.Endpoints.ExchangeEndpoints.md 'SHTCGClient\.Endpoints\.ExchangeEndpoints')** `Class`
+  - **[ExchangeEndpoints\(ClientService\)](SHTCGClient.Endpoints.ExchangeEndpoints.md#SHTCGClient.Endpoints.ExchangeEndpoints.ExchangeEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.ExchangeEndpoints\.ExchangeEndpoints\(SHTCGClient\.ClientService\)')** `Constructor`
+  - **[Candles\(int, int, int\)](SHTCGClient.Endpoints.ExchangeEndpoints.md#SHTCGClient.Endpoints.ExchangeEndpoints.Candles(int,int,int) 'SHTCGClient\.Endpoints\.ExchangeEndpoints\.Candles\(int, int, int\)')** `Method` Get the candle graph for an exchange
+  - **[Exchanges\(\)](SHTCGClient.Endpoints.ExchangeEndpoints.md#SHTCGClient.Endpoints.ExchangeEndpoints.Exchanges() 'SHTCGClient\.Endpoints\.ExchangeEndpoints\.Exchanges\(\)')** `Method` Get the currently running exchanges
+  - **[Positions\(\)](SHTCGClient.Endpoints.ExchangeEndpoints.md#SHTCGClient.Endpoints.ExchangeEndpoints.Positions() 'SHTCGClient\.Endpoints\.ExchangeEndpoints\.Positions\(\)')** `Method` Get the user's positions in the exchanges
+- **[FeaturesEndpoints](SHTCGClient.Endpoints.FeaturesEndpoints.md 'SHTCGClient\.Endpoints\.FeaturesEndpoints')** `Class` Class for interacting with the features endpoint
+  - **[FeaturesEndpoints\(ClientService\)](SHTCGClient.Endpoints.FeaturesEndpoints.md#SHTCGClient.Endpoints.FeaturesEndpoints.FeaturesEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.FeaturesEndpoints\.FeaturesEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the features endpoint
+  - **[Features\(\)](SHTCGClient.Endpoints.FeaturesEndpoints.md#SHTCGClient.Endpoints.FeaturesEndpoints.Features() 'SHTCGClient\.Endpoints\.FeaturesEndpoints\.Features\(\)')** `Method` Get the current features available for voting\. Check if the user is able to vote with [VoteStatus\(\)](SHTCGClient.Endpoints.FeaturesEndpoints.md#SHTCGClient.Endpoints.FeaturesEndpoints.VoteStatus() 'SHTCGClient\.Endpoints\.FeaturesEndpoints\.VoteStatus\(\)') before attempting to vote\.
+  - **[VoteStatus\(\)](SHTCGClient.Endpoints.FeaturesEndpoints.md#SHTCGClient.Endpoints.FeaturesEndpoints.VoteStatus() 'SHTCGClient\.Endpoints\.FeaturesEndpoints\.VoteStatus\(\)')** `Method` Gets the users voting eligibility and the next time they may vote\.
+- **[SeasonsEndpoints](SHTCGClient.Endpoints.SeasonsEndpoints.md 'SHTCGClient\.Endpoints\.SeasonsEndpoints')** `Class` Class for interacting with the seasons endpoint
+  - **[SeasonsEndpoints\(ClientService\)](SHTCGClient.Endpoints.SeasonsEndpoints.md#SHTCGClient.Endpoints.SeasonsEndpoints.SeasonsEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.SeasonsEndpoints\.SeasonsEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the seasons endpoint
+  - **[Decks](SHTCGClient.Endpoints.SeasonsEndpoints.md#SHTCGClient.Endpoints.SeasonsEndpoints.Decks 'SHTCGClient\.Endpoints\.SeasonsEndpoints\.Decks')** `Field` The seasons/decks endpoint
+  - **[ById\(int\)](SHTCGClient.Endpoints.SeasonsEndpoints.md#SHTCGClient.Endpoints.SeasonsEndpoints.ById(int) 'SHTCGClient\.Endpoints\.SeasonsEndpoints\.ById\(int\)')** `Method` Get season by id
+  - **[Current\(\)](SHTCGClient.Endpoints.SeasonsEndpoints.md#SHTCGClient.Endpoints.SeasonsEndpoints.Current() 'SHTCGClient\.Endpoints\.SeasonsEndpoints\.Current\(\)')** `Method` Get the currently active season
+- **[UsersEndpoints](SHTCGClient.Endpoints.UsersEndpoints.md 'SHTCGClient\.Endpoints\.UsersEndpoints')** `Class` Class for interacting with the users endpoint
+  - **[UsersEndpoints\(ClientService\)](SHTCGClient.Endpoints.UsersEndpoints.md#SHTCGClient.Endpoints.UsersEndpoints.UsersEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.UsersEndpoints\.UsersEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the users endpoint
+  - **[Friends\(\)](SHTCGClient.Endpoints.UsersEndpoints.md#SHTCGClient.Endpoints.UsersEndpoints.Friends() 'SHTCGClient\.Endpoints\.UsersEndpoints\.Friends\(\)')** `Method` Get your friends
+  - **[Leaderboard\(string, int\)](SHTCGClient.Endpoints.UsersEndpoints.md#SHTCGClient.Endpoints.UsersEndpoints.Leaderboard(string,int) 'SHTCGClient\.Endpoints\.UsersEndpoints\.Leaderboard\(string, int\)')** `Method` Fetch the leaderboard
+  - **[UserByName\(string\)](SHTCGClient.Endpoints.UsersEndpoints.md#SHTCGClient.Endpoints.UsersEndpoints.UserByName(string) 'SHTCGClient\.Endpoints\.UsersEndpoints\.UserByName\(string\)')** `Method` Search for a user by name
+- **[VendorsEndpoints](SHTCGClient.Endpoints.VendorsEndpoints.md 'SHTCGClient\.Endpoints\.VendorsEndpoints')** `Class` Class for interacting with the vendors endpoint\.
+  - **[VendorsEndpoints\(ClientService\)](SHTCGClient.Endpoints.VendorsEndpoints.md#SHTCGClient.Endpoints.VendorsEndpoints.VendorsEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.VendorsEndpoints\.VendorsEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the vendors endpoint\.
+  - **[GetVendors\(\)](SHTCGClient.Endpoints.VendorsEndpoints.md#SHTCGClient.Endpoints.VendorsEndpoints.GetVendors() 'SHTCGClient\.Endpoints\.VendorsEndpoints\.GetVendors\(\)')** `Method` Get the current vendors
+  - **[SellCard\(int, int\)](SHTCGClient.Endpoints.VendorsEndpoints.md#SHTCGClient.Endpoints.VendorsEndpoints.SellCard(int,int) 'SHTCGClient\.Endpoints\.VendorsEndpoints\.SellCard\(int, int\)')** `Method` Sell a card
+  - **[SellCards\(int\[\], int\)](SHTCGClient.Endpoints.VendorsEndpoints.md#SHTCGClient.Endpoints.VendorsEndpoints.SellCards(int[],int) 'SHTCGClient\.Endpoints\.VendorsEndpoints\.SellCards\(int\[\], int\)')** `Method` Sell cards
 
 <a name='SHTCGClient.Models'></a>
 
@@ -71,6 +104,13 @@
 <a name='SHTCGClient.Models.Cards'></a>
 
 ## SHTCGClient\.Models\.Cards Namespace
+- **[BaseCard](SHTCGClient.Models.Cards.BaseCard.md 'SHTCGClient\.Models\.Cards\.BaseCard')** `Class` The base variant of a card
+  - **[Description](SHTCGClient.Models.Cards.BaseCard.md#SHTCGClient.Models.Cards.BaseCard.Description 'SHTCGClient\.Models\.Cards\.BaseCard\.Description')** `Property` This card's description
+  - **[Id](SHTCGClient.Models.Cards.BaseCard.md#SHTCGClient.Models.Cards.BaseCard.Id 'SHTCGClient\.Models\.Cards\.BaseCard\.Id')** `Property` The ID of this card\. This is equal to [BaseCardId](SHTCGClient.Models.Cards.Card.md#SHTCGClient.Models.Cards.Card.BaseCardId 'SHTCGClient\.Models\.Cards\.Card\.BaseCardId')
+  - **[ImageUrl](SHTCGClient.Models.Cards.BaseCard.md#SHTCGClient.Models.Cards.BaseCard.ImageUrl 'SHTCGClient\.Models\.Cards\.BaseCard\.ImageUrl')** `Property` The URL for this card's image
+  - **[Name](SHTCGClient.Models.Cards.BaseCard.md#SHTCGClient.Models.Cards.BaseCard.Name 'SHTCGClient\.Models\.Cards\.BaseCard\.Name')** `Property` The name of this card
+  - **[Rarity](SHTCGClient.Models.Cards.BaseCard.md#SHTCGClient.Models.Cards.BaseCard.Rarity 'SHTCGClient\.Models\.Cards\.BaseCard\.Rarity')** `Property` How rare this card is
+  - **[ReleaseDate](SHTCGClient.Models.Cards.BaseCard.md#SHTCGClient.Models.Cards.BaseCard.ReleaseDate 'SHTCGClient\.Models\.Cards\.BaseCard\.ReleaseDate')** `Property` The day this card was released\.
 - **[Card](SHTCGClient.Models.Cards.Card.md 'SHTCGClient\.Models\.Cards\.Card')** `Class` A Trading Card
   - **[BaseCardId](SHTCGClient.Models.Cards.Card.md#SHTCGClient.Models.Cards.Card.BaseCardId 'SHTCGClient\.Models\.Cards\.Card\.BaseCardId')** `Property`
   - **[CardSetId](SHTCGClient.Models.Cards.Card.md#SHTCGClient.Models.Cards.Card.CardSetId 'SHTCGClient\.Models\.Cards\.Card\.CardSetId')** `Property`

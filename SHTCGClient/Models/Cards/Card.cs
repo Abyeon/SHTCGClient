@@ -78,7 +78,7 @@ public class Card : IEquatable<Card>, IJsonOnDeserialized
     /// </summary>
     /// <param name="client">Your client</param>
     /// <returns>Information regarding your sale.</returns>
-    public async Task<CardSellResponse?> Sell(ClientService client) => await client.SellCard(Id, 1);
+    public async Task<CardSellResponse?> Sell(ClientService client) => await client.Vendors.SellCard(Id, 1);
 
     public bool Equals(Card? other)
     {

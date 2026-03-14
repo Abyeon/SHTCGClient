@@ -47,5 +47,5 @@ public class Exchange
     /// <param name="interval">Every x minutes for candles</param>
     /// <param name="limit">Limit how many candles you get</param>
     /// <returns></returns>
-    public async Task<Candle[]?> GetCandles(ClientService client, int interval = 5, int limit = 288) => await client.GetCandles(Id, interval, limit);
+    public async Task<Candle[]?> GetCandles(ClientService client, int interval = 5, int limit = 288) => await client.Exchange.Candles(Id, interval, limit);
 }
