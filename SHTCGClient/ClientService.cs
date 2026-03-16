@@ -42,6 +42,11 @@ public class ClientService : IAsyncDisposable
     public readonly ThrottledProcessor Processor;
 
     /// <summary>
+    /// Auction House buying/selling
+    /// </summary>
+    public readonly AuctionEndpoints Auction;
+    
+    /// <summary>
     /// Login, logout, etc
     /// </summary>
     public readonly AuthEndpoints Auth;
@@ -86,7 +91,7 @@ public class ClientService : IAsyncDisposable
     /// </summary>
     public bool LoggedIn;
     
-    private const string ApiUrl = "https://api.tcg.robswc.me/api/";
+    public const string ApiUrl = "https://api.tcg.robswc.me/api/";
     
     public ClientService(ThrottledProcessor processor)
     {
@@ -105,6 +110,7 @@ public class ClientService : IAsyncDisposable
         Client.DefaultRequestHeaders.Add("Referer", "https://app.tcg.robswc.me/");
         Client.DefaultRequestHeaders.Add("Origin", "https://app.tcg.robswc.me");
 
+        Auction = new AuctionEndpoints(this);
         Auth = new AuthEndpoints(this);
         Cards = new CardsEndpoints(this);
         Companions = new CompanionsEndpoints(this);
@@ -237,6 +243,25 @@ public class ClientService : IAsyncDisposable
         
         // Console.WriteLine(json);
         return JsonSerializer.Deserialize<T>(json);
+    }
+
+    /// <summary>
+    /// Send a request to the API with the CSRF token
+    /// </summary>
+    /// <param name="method">Method to use</param>
+    /// <param name="url">The url, the API url /api/ is prepended already.</param>
+    /// <returns>HttpResponse task</returns>
+    public async Task<HttpResponseMessage> SendWithToken(HttpMethod method, string url)
+    {
+        string token = GetCsrf();
+        var request = new HttpRequestMessage(method, ApiUrl + url);
+        
+        if (!string.IsNullOrEmpty(token))
+        {
+            request.Headers.Add("X-CSRFToken", token);
+        }
+            
+        return await SendAsync(request);
     }
 
     private async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request) => await Processor.EnqueueAsync<HttpResponseMessage>(async token => await Client.SendAsync(request, token));

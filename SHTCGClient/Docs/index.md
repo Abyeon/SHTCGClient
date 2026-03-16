@@ -9,6 +9,8 @@
 - **[ClientService](SHTCGClient.ClientService.md 'SHTCGClient\.ClientService')** `Class` The main service for interacting with the Something Happened TCG API\.
   - **[ClientService\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.ClientService() 'SHTCGClient\.ClientService\.ClientService\(\)')** `Constructor`
   - **[ClientService\(ThrottledProcessor\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.ClientService(SHTCGClient.ThrottledProcessor) 'SHTCGClient\.ClientService\.ClientService\(SHTCGClient\.ThrottledProcessor\)')** `Constructor`
+  - **[ApiUrl](SHTCGClient.ClientService.md#SHTCGClient.ClientService.ApiUrl 'SHTCGClient\.ClientService\.ApiUrl')** `Field`
+  - **[Auction](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Auction 'SHTCGClient\.ClientService\.Auction')** `Field` Auction House buying/selling
   - **[Auth](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Auth 'SHTCGClient\.ClientService\.Auth')** `Field` Login, logout, etc
   - **[Cards](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Cards 'SHTCGClient\.ClientService\.Cards')** `Field` Roll, roll status, user's cards, etc
   - **[Client](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Client 'SHTCGClient\.ClientService\.Client')** `Field`
@@ -27,6 +29,7 @@
   - **[Request\(HttpMethod, string, object\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Request(System.Net.Http.HttpMethod,string,object) 'SHTCGClient\.ClientService\.Request\(System\.Net\.Http\.HttpMethod, string, object\)')** `Method` A helper method for sending a request to the API
   - **[Request&lt;T&gt;\(HttpMethod, string\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Request_T_(System.Net.Http.HttpMethod,string) 'SHTCGClient\.ClientService\.Request\<T\>\(System\.Net\.Http\.HttpMethod, string\)')** `Method` A helper method for sending a request to the API
   - **[Request&lt;T&gt;\(HttpMethod, string, object\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Request_T_(System.Net.Http.HttpMethod,string,object) 'SHTCGClient\.ClientService\.Request\<T\>\(System\.Net\.Http\.HttpMethod, string, object\)')** `Method` A helper method for sending a request to the API
+  - **[SendWithToken\(HttpMethod, string\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.SendWithToken(System.Net.Http.HttpMethod,string) 'SHTCGClient\.ClientService\.SendWithToken\(System\.Net\.Http\.HttpMethod, string\)')** `Method` Send a request to the API with the CSRF token
 - **[ThrottledProcessor](SHTCGClient.ThrottledProcessor.md 'SHTCGClient\.ThrottledProcessor')** `Class` Throttled task processor utilizing threading\.channels\.
   - **[ThrottledProcessor\(TimeSpan\)](SHTCGClient.ThrottledProcessor.md#SHTCGClient.ThrottledProcessor.ThrottledProcessor(System.TimeSpan) 'SHTCGClient\.ThrottledProcessor\.ThrottledProcessor\(System\.TimeSpan\)')** `Constructor`
   - **[Dispose\(\)](SHTCGClient.ThrottledProcessor.md#SHTCGClient.ThrottledProcessor.Dispose() 'SHTCGClient\.ThrottledProcessor\.Dispose\(\)')** `Method`
@@ -39,6 +42,11 @@
 <a name='SHTCGClient.Endpoints'></a>
 
 ## SHTCGClient\.Endpoints Namespace
+- **[AuctionEndpoints](SHTCGClient.Endpoints.AuctionEndpoints.md 'SHTCGClient\.Endpoints\.AuctionEndpoints')** `Class` Class for interacting with the Auction API
+  - **[AuctionEndpoints\(ClientService\)](SHTCGClient.Endpoints.AuctionEndpoints.md#SHTCGClient.Endpoints.AuctionEndpoints.AuctionEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.AuctionEndpoints\.AuctionEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the Auction API
+  - **[Cart\(\)](SHTCGClient.Endpoints.AuctionEndpoints.md#SHTCGClient.Endpoints.AuctionEndpoints.Cart() 'SHTCGClient\.Endpoints\.AuctionEndpoints\.Cart\(\)')** `Method` Get user's current cart
+  - **[Checkout\(\)](SHTCGClient.Endpoints.AuctionEndpoints.md#SHTCGClient.Endpoints.AuctionEndpoints.Checkout() 'SHTCGClient\.Endpoints\.AuctionEndpoints\.Checkout\(\)')** `Method` Checkout the items currently in the user's cart
+  - **[Listings\(string, string\)](SHTCGClient.Endpoints.AuctionEndpoints.md#SHTCGClient.Endpoints.AuctionEndpoints.Listings(string,string) 'SHTCGClient\.Endpoints\.AuctionEndpoints\.Listings\(string, string\)')** `Method` Get the Auction listings
 - **[AuthEndpoints](SHTCGClient.Endpoints.AuthEndpoints.md 'SHTCGClient\.Endpoints\.AuthEndpoints')** `Class` Class for interacting with the auth endpoint
   - **[AuthEndpoints\(ClientService\)](SHTCGClient.Endpoints.AuthEndpoints.md#SHTCGClient.Endpoints.AuthEndpoints.AuthEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.AuthEndpoints\.AuthEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the auth endpoint
   - **[Login\(Credentials\)](SHTCGClient.Endpoints.AuthEndpoints.md#SHTCGClient.Endpoints.AuthEndpoints.Login(SHTCGClient.Credentials) 'SHTCGClient\.Endpoints\.AuthEndpoints\.Login\(SHTCGClient\.Credentials\)')** `Method` Log in to the game
@@ -100,6 +108,43 @@
   - **[PageSize](SHTCGClient.Models.PaginatedItem_T_.md#SHTCGClient.Models.PaginatedItem_T_.PageSize 'SHTCGClient\.Models\.PaginatedItem\<T\>\.PageSize')** `Property`
   - **[Total](SHTCGClient.Models.PaginatedItem_T_.md#SHTCGClient.Models.PaginatedItem_T_.Total 'SHTCGClient\.Models\.PaginatedItem\<T\>\.Total')** `Property`
   - **[TotalPages](SHTCGClient.Models.PaginatedItem_T_.md#SHTCGClient.Models.PaginatedItem_T_.TotalPages 'SHTCGClient\.Models\.PaginatedItem\<T\>\.TotalPages')** `Property`
+
+<a name='SHTCGClient.Models.Auction'></a>
+
+## SHTCGClient\.Models\.Auction Namespace
+- **[AuctionCard](SHTCGClient.Models.Auction.AuctionCard.md 'SHTCGClient\.Models\.Auction\.AuctionCard')** `Class` A class specific to Auction listed cards
+  - **[BaseCardId](SHTCGClient.Models.Auction.AuctionCard.md#SHTCGClient.Models.Auction.AuctionCard.BaseCardId 'SHTCGClient\.Models\.Auction\.AuctionCard\.BaseCardId')** `Property`
+  - **[BaseCardName](SHTCGClient.Models.Auction.AuctionCard.md#SHTCGClient.Models.Auction.AuctionCard.BaseCardName 'SHTCGClient\.Models\.Auction\.AuctionCard\.BaseCardName')** `Property`
+  - **[EstimatedValue](SHTCGClient.Models.Auction.AuctionCard.md#SHTCGClient.Models.Auction.AuctionCard.EstimatedValue 'SHTCGClient\.Models\.Auction\.AuctionCard\.EstimatedValue')** `Property`
+  - **[Foil](SHTCGClient.Models.Auction.AuctionCard.md#SHTCGClient.Models.Auction.AuctionCard.Foil 'SHTCGClient\.Models\.Auction\.AuctionCard\.Foil')** `Property`
+  - **[Id](SHTCGClient.Models.Auction.AuctionCard.md#SHTCGClient.Models.Auction.AuctionCard.Id 'SHTCGClient\.Models\.Auction\.AuctionCard\.Id')** `Property`
+  - **[Image](SHTCGClient.Models.Auction.AuctionCard.md#SHTCGClient.Models.Auction.AuctionCard.Image 'SHTCGClient\.Models\.Auction\.AuctionCard\.Image')** `Property`
+  - **[Rarity](SHTCGClient.Models.Auction.AuctionCard.md#SHTCGClient.Models.Auction.AuctionCard.Rarity 'SHTCGClient\.Models\.Auction\.AuctionCard\.Rarity')** `Property`
+  - **[Stack](SHTCGClient.Models.Auction.AuctionCard.md#SHTCGClient.Models.Auction.AuctionCard.Stack 'SHTCGClient\.Models\.Auction\.AuctionCard\.Stack')** `Property`
+  - **[Trim](SHTCGClient.Models.Auction.AuctionCard.md#SHTCGClient.Models.Auction.AuctionCard.Trim 'SHTCGClient\.Models\.Auction\.AuctionCard\.Trim')** `Property`
+- **[Cart](SHTCGClient.Models.Auction.Cart.md 'SHTCGClient\.Models\.Auction\.Cart')** `Class` The user's auction cart
+  - **[Items](SHTCGClient.Models.Auction.Cart.md#SHTCGClient.Models.Auction.Cart.Items 'SHTCGClient\.Models\.Auction\.Cart\.Items')** `Property` Array of items to be purchased
+  - **[Total](SHTCGClient.Models.Auction.Cart.md#SHTCGClient.Models.Auction.Cart.Total 'SHTCGClient\.Models\.Auction\.Cart\.Total')** `Property` The total of this purchase
+- **[CartItem](SHTCGClient.Models.Auction.CartItem.md 'SHTCGClient\.Models\.Auction\.CartItem')** `Class` Object representing an item to be purchased
+  - **[AddedAt](SHTCGClient.Models.Auction.CartItem.md#SHTCGClient.Models.Auction.CartItem.AddedAt 'SHTCGClient\.Models\.Auction\.CartItem\.AddedAt')** `Property` The date this item was added to the cart
+  - **[Id](SHTCGClient.Models.Auction.CartItem.md#SHTCGClient.Models.Auction.CartItem.Id 'SHTCGClient\.Models\.Auction\.CartItem\.Id')** `Property` This ID of this cart item
+  - **[Listing](SHTCGClient.Models.Auction.CartItem.md#SHTCGClient.Models.Auction.CartItem.Listing 'SHTCGClient\.Models\.Auction\.CartItem\.Listing')** `Property` The listing to be purchased
+- **[Checkout](SHTCGClient.Models.Auction.Checkout.md 'SHTCGClient\.Models\.Auction\.Checkout')** `Class` The response for purchasing items at the auction house
+  - **[Failed](SHTCGClient.Models.Auction.Checkout.md#SHTCGClient.Models.Auction.Checkout.Failed 'SHTCGClient\.Models\.Auction\.Checkout\.Failed')** `Property` Array of listing Ids that failed to be purchased
+  - **[Message](SHTCGClient.Models.Auction.Checkout.md#SHTCGClient.Models.Auction.Checkout.Message 'SHTCGClient\.Models\.Auction\.Checkout\.Message')** `Property` The response message
+  - **[Purchased](SHTCGClient.Models.Auction.Checkout.md#SHTCGClient.Models.Auction.Checkout.Purchased 'SHTCGClient\.Models\.Auction\.Checkout\.Purchased')** `Property` Array of listing Ids purchased
+  - **[TotalSpent](SHTCGClient.Models.Auction.Checkout.md#SHTCGClient.Models.Auction.Checkout.TotalSpent 'SHTCGClient\.Models\.Auction\.Checkout\.TotalSpent')** `Property` The total money spent on this purchase
+- **[Listing](SHTCGClient.Models.Auction.Listing.md 'SHTCGClient\.Models\.Auction\.Listing')** `Class` An auction listing
+  - **[Card](SHTCGClient.Models.Auction.Listing.md#SHTCGClient.Models.Auction.Listing.Card 'SHTCGClient\.Models\.Auction\.Listing\.Card')** `Property` The card being sold
+  - **[CreatedAt](SHTCGClient.Models.Auction.Listing.md#SHTCGClient.Models.Auction.Listing.CreatedAt 'SHTCGClient\.Models\.Auction\.Listing\.CreatedAt')** `Property` The date this listing was created
+  - **[ExpiresAt](SHTCGClient.Models.Auction.Listing.md#SHTCGClient.Models.Auction.Listing.ExpiresAt 'SHTCGClient\.Models\.Auction\.Listing\.ExpiresAt')** `Property` When this listing expires
+  - **[Id](SHTCGClient.Models.Auction.Listing.md#SHTCGClient.Models.Auction.Listing.Id 'SHTCGClient\.Models\.Auction\.Listing\.Id')** `Property` This ID of this listing
+  - **[Price](SHTCGClient.Models.Auction.Listing.md#SHTCGClient.Models.Auction.Listing.Price 'SHTCGClient\.Models\.Auction\.Listing\.Price')** `Property` The price of this card
+  - **[Seller](SHTCGClient.Models.Auction.Listing.md#SHTCGClient.Models.Auction.Listing.Seller 'SHTCGClient\.Models\.Auction\.Listing\.Seller')** `Property` Information regarding the seller for this listing
+  - **[Status](SHTCGClient.Models.Auction.Listing.md#SHTCGClient.Models.Auction.Listing.Status 'SHTCGClient\.Models\.Auction\.Listing\.Status')** `Property` The status of this listing \(active, inactive\)
+- **[Seller](SHTCGClient.Models.Auction.Seller.md 'SHTCGClient\.Models\.Auction\.Seller')** `Class` Seller of an auction item
+  - **[Id](SHTCGClient.Models.Auction.Seller.md#SHTCGClient.Models.Auction.Seller.Id 'SHTCGClient\.Models\.Auction\.Seller\.Id')** `Property` This seller's [Id](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.Id 'SHTCGClient\.Models\.Users\.User\.Id')
+  - **[Username](SHTCGClient.Models.Auction.Seller.md#SHTCGClient.Models.Auction.Seller.Username 'SHTCGClient\.Models\.Auction\.Seller\.Username')** `Property` This seller's Username
 
 <a name='SHTCGClient.Models.Cards'></a>
 

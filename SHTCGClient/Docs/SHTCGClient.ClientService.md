@@ -36,6 +36,30 @@ public ClientService(SHTCGClient.ThrottledProcessor processor);
 `processor` [ThrottledProcessor](SHTCGClient.ThrottledProcessor.md 'SHTCGClient\.ThrottledProcessor')
 ### Fields
 
+<a name='SHTCGClient.ClientService.ApiUrl'></a>
+
+## ClientService\.ApiUrl Field
+
+```csharp
+public const string ApiUrl = "https://api.tcg.robswc.me/api/";
+```
+
+#### Field Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='SHTCGClient.ClientService.Auction'></a>
+
+## ClientService\.Auction Field
+
+Auction House buying/selling
+
+```csharp
+public readonly AuctionEndpoints Auction;
+```
+
+#### Field Value
+[AuctionEndpoints](SHTCGClient.Endpoints.AuctionEndpoints.md 'SHTCGClient\.Endpoints\.AuctionEndpoints')
+
 <a name='SHTCGClient.ClientService.Auth'></a>
 
 ## ClientService\.Auth Field
@@ -342,3 +366,30 @@ The data do send
 #### Returns
 [System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[T](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Request_T_(System.Net.Http.HttpMethod,string,object).T 'SHTCGClient\.ClientService\.Request\<T\>\(System\.Net\.Http\.HttpMethod, string, object\)\.T')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
 The response object
+
+<a name='SHTCGClient.ClientService.SendWithToken(System.Net.Http.HttpMethod,string)'></a>
+
+## ClientService\.SendWithToken\(HttpMethod, string\) Method
+
+Send a request to the API with the CSRF token
+
+```csharp
+public System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage> SendWithToken(System.Net.Http.HttpMethod method, string url);
+```
+#### Parameters
+
+<a name='SHTCGClient.ClientService.SendWithToken(System.Net.Http.HttpMethod,string).method'></a>
+
+`method` [System\.Net\.Http\.HttpMethod](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpmethod 'System\.Net\.Http\.HttpMethod')
+
+Method to use
+
+<a name='SHTCGClient.ClientService.SendWithToken(System.Net.Http.HttpMethod,string).url'></a>
+
+`url` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+The url, the API url /api/ is prepended already\.
+
+#### Returns
+[System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[System\.Net\.Http\.HttpResponseMessage](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpresponsemessage 'System\.Net\.Http\.HttpResponseMessage')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
+HttpResponse task
