@@ -81,6 +81,20 @@ Array of cards
 - [Id](SHTCGClient.Models.Users.User.md#SHTCGClient.Models.Users.User.Id 'SHTCGClient\.Models\.Users\.User\.Id')
 - [Id](SHTCGClient.Models.Users.Profile.md#SHTCGClient.Models.Users.Profile.Id 'SHTCGClient\.Models\.Users\.Profile\.Id')
 
+<a name='SHTCGClient.Endpoints.CardsEndpoints.Refill()'></a>
+
+## CardsEndpoints\.Refill\(\) Method
+
+Refill the user's rolls
+
+```csharp
+public System.Threading.Tasks.Task<SHTCGClient.Models.Cards.RefillResponse?> Refill();
+```
+
+#### Returns
+[System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[RefillResponse](SHTCGClient.Models.Cards.RefillResponse.md 'SHTCGClient\.Models\.Cards\.RefillResponse')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
+Refill information and roll information
+
 <a name='SHTCGClient.Endpoints.CardsEndpoints.Roll()'></a>
 
 ## CardsEndpoints\.Roll\(\) Method

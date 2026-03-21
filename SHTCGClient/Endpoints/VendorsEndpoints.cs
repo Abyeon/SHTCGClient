@@ -37,4 +37,6 @@ public class VendorsEndpoints (ClientService client)
     /// </summary>
     /// <returns>Array of vendors</returns>
     public async Task<Vendor[]?> GetVendors() => await client.Request<Vendor[]>(HttpMethod.Get, "vendors/list");
+    
+    public async Task<GradeResponse?> Grade(int id) => await client.Request<GradeResponse>(HttpMethod.Post, "vendors/card-grader/jadd/grade", new { card_id = id });
 }

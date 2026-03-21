@@ -25,4 +25,10 @@ public class SeasonsEndpoints (ClientService client)
     /// </summary>
     /// <returns>The active season</returns>
     public async Task<Season?> Current() => await client.Request<Season>(HttpMethod.Get, "seasons/active/current");
+    
+    /// <summary>
+    /// Gets the Lowest Drop Chance (GTO) cards for the current season.
+    /// </summary>
+    /// <returns>Array of GTO cards.</returns>
+    public async Task<Card[]?> LowestDropChance() => await client.Request<Card[]?>(HttpMethod.Get, "seasons/active/current/cards/lowest-drop-chance");
 }

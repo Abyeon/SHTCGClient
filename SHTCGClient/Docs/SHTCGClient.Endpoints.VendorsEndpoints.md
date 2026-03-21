@@ -42,6 +42,22 @@ public System.Threading.Tasks.Task<SHTCGClient.Models.Vendors.Vendor[]?> GetVend
 [System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Vendor](SHTCGClient.Models.Vendors.Vendor.md 'SHTCGClient\.Models\.Vendors\.Vendor')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
 Array of vendors
 
+<a name='SHTCGClient.Endpoints.VendorsEndpoints.Grade(int)'></a>
+
+## VendorsEndpoints\.Grade\(int\) Method
+
+```csharp
+public System.Threading.Tasks.Task<SHTCGClient.Models.Vendors.GradeResponse?> Grade(int id);
+```
+#### Parameters
+
+<a name='SHTCGClient.Endpoints.VendorsEndpoints.Grade(int).id'></a>
+
+`id` [System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')
+
+#### Returns
+[System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[GradeResponse](SHTCGClient.Models.Vendors.GradeResponse.md 'SHTCGClient\.Models\.Vendors\.GradeResponse')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')
+
 <a name='SHTCGClient.Endpoints.VendorsEndpoints.SellCard(int,int)'></a>
 
 ## VendorsEndpoints\.SellCard\(int, int\) Method

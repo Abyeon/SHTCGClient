@@ -71,6 +71,33 @@ public System.Threading.Tasks.Task<SHTCGClient.Models.Exchange.Exchange[]?> Exch
 [System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Exchange](SHTCGClient.Models.Exchange.Exchange.md 'SHTCGClient\.Models\.Exchange\.Exchange')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
 Array of exchanges
 
+<a name='SHTCGClient.Endpoints.ExchangeEndpoints.GetTrades(int,int)'></a>
+
+## ExchangeEndpoints\.GetTrades\(int, int\) Method
+
+Fetch the trades for a given exchange
+
+```csharp
+public System.Threading.Tasks.Task<SHTCGClient.Models.Exchange.Trade[]?> GetTrades(int id, int limit);
+```
+#### Parameters
+
+<a name='SHTCGClient.Endpoints.ExchangeEndpoints.GetTrades(int,int).id'></a>
+
+`id` [System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')
+
+The exchange ID
+
+<a name='SHTCGClient.Endpoints.ExchangeEndpoints.GetTrades(int,int).limit'></a>
+
+`limit` [System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')
+
+The limit of trades to fetch
+
+#### Returns
+[System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Trade](SHTCGClient.Models.Exchange.Trade.md 'SHTCGClient\.Models\.Exchange\.Trade')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
+Array of exchange trades
+
 <a name='SHTCGClient.Endpoints.ExchangeEndpoints.Positions()'></a>
 
 ## ExchangeEndpoints\.Positions\(\) Method

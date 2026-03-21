@@ -76,3 +76,17 @@ public System.Threading.Tasks.Task<SHTCGClient.Models.Seasons.Season?> Current()
 #### Returns
 [System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Season](SHTCGClient.Models.Seasons.Season.md 'SHTCGClient\.Models\.Seasons\.Season')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
 The active season
+
+<a name='SHTCGClient.Endpoints.SeasonsEndpoints.LowestDropChance()'></a>
+
+## SeasonsEndpoints\.LowestDropChance\(\) Method
+
+Gets the Lowest Drop Chance \(GTO\) cards for the current season\.
+
+```csharp
+public System.Threading.Tasks.Task<SHTCGClient.Models.Cards.Card[]?> LowestDropChance();
+```
+
+#### Returns
+[System\.Threading\.Tasks\.Task&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')[Card](SHTCGClient.Models.Cards.Card.md 'SHTCGClient\.Models\.Cards\.Card')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1 'System\.Threading\.Tasks\.Task\`1')  
+Array of GTO cards\.

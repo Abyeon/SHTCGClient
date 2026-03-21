@@ -41,7 +41,7 @@ public class Card : IEquatable<Card>, IJsonOnDeserialized
     public string Foil { get; init; } = null!;
     
     [JsonPropertyName("stack")]
-    public int Stack { get; init; }
+    public int Stack { get; set; }
     
     [JsonPropertyName("drop_chance")]
     public double DropChance { get; init; }
@@ -53,7 +53,7 @@ public class Card : IEquatable<Card>, IJsonOnDeserialized
     public int? CollectionId { get; init; }
 
     [JsonPropertyName("lock")]
-    public bool IsLocked { get; init; } = false;
+    public bool IsLocked { get; set; } = false;
     
     [JsonPropertyName("grade")]
     public double? Grade { get; init; }

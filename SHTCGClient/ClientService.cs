@@ -75,6 +75,11 @@ public class ClientService : IAsyncDisposable
     /// Season information, deck management, etc.
     /// </summary>
     public readonly SeasonsEndpoints Seasons;
+
+    /// <summary>
+    /// Player card and money trading
+    /// </summary>
+    public readonly TradesEndpoints Trades;
     
     /// <summary>
     /// Socials, net worth leaderboard, etc.
@@ -117,6 +122,7 @@ public class ClientService : IAsyncDisposable
         Exchange = new ExchangeEndpoints(this);
         Features = new FeaturesEndpoints(this);
         Seasons = new SeasonsEndpoints(this);
+        Trades = new TradesEndpoints(this);
         Users = new UsersEndpoints(this);
         Vendors = new VendorsEndpoints(this);
 

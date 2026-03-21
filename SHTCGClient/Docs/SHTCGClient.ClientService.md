@@ -195,6 +195,19 @@ public readonly SeasonsEndpoints Seasons;
 #### Field Value
 [SeasonsEndpoints](SHTCGClient.Endpoints.SeasonsEndpoints.md 'SHTCGClient\.Endpoints\.SeasonsEndpoints')
 
+<a name='SHTCGClient.ClientService.Trades'></a>
+
+## ClientService\.Trades Field
+
+Player card and money trading
+
+```csharp
+public readonly TradesEndpoints Trades;
+```
+
+#### Field Value
+[TradesEndpoints](SHTCGClient.Endpoints.TradesEndpoints.md 'SHTCGClient\.Endpoints\.TradesEndpoints')
+
 <a name='SHTCGClient.ClientService.Users'></a>
 
 ## ClientService\.Users Field

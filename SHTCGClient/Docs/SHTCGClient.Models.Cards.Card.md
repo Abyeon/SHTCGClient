@@ -151,7 +151,7 @@ public string ImageUrl { get; init; }
 ## Card\.IsLocked Property
 
 ```csharp
-public bool IsLocked { get; init; }
+public bool IsLocked { get; set; }
 ```
 
 #### Property Value
@@ -217,7 +217,7 @@ public string ReleaseDate { get; init; }
 ## Card\.Stack Property
 
 ```csharp
-public int Stack { get; init; }
+public int Stack { get; set; }
 ```
 
 #### Property Value

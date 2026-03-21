@@ -24,4 +24,12 @@ public class ExchangeEndpoints (ClientService client)
     /// </summary>
     /// <returns>Array of positions</returns>
     public async Task<Position[]?> Positions() => await client.Request<Position[]>(HttpMethod.Get, "exchange/positions");
+    
+    /// <summary>
+    /// Fetch the trades for a given exchange
+    /// </summary>
+    /// <param name="id">The exchange ID</param>
+    /// <param name="limit">The limit of trades to fetch</param>
+    /// <returns>Array of exchange trades</returns>
+    public async Task<Trade[]?> GetTrades(int id, int limit) => await client.Request<Trade[]>(HttpMethod.Get, $"exchange/{id}/trades?limit={limit}");
 }

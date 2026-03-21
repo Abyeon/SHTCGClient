@@ -22,6 +22,12 @@ public class CardsEndpoints (ClientService client)
     public async Task<CardRollResponse?> Roll() => await client.Request<CardRollResponse>(HttpMethod.Post, "cards/roll");
     
     /// <summary>
+    /// Refill the user's rolls
+    /// </summary>
+    /// <returns>Refill information and roll information</returns>
+    public async Task<RefillResponse?> Refill() => await client.Request<RefillResponse>(HttpMethod.Post, "cards/roll/refill");
+    
+    /// <summary>
     /// Get the last x rolls
     /// </summary>
     /// <param name="count">Amount of rolls to fetch</param>
@@ -45,7 +51,7 @@ public class CardsEndpoints (ClientService client)
         var page = 1;
         while (true)
         {
-            var cardPage = await client.Request<PaginatedItem<Card>>(HttpMethod.Get, $"cards/my-cards?page={page}&page_size=24");
+            var cardPage = await client.Request<PaginatedItem<Card>>(HttpMethod.Get, $"cards/my-cards?page={page}&page_size=250");
             if (cardPage == null) break;
             
             cards.AddRange(cardPage.Data);

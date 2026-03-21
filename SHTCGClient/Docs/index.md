@@ -22,6 +22,7 @@
   - **[LoggedIn](SHTCGClient.ClientService.md#SHTCGClient.ClientService.LoggedIn 'SHTCGClient\.ClientService\.LoggedIn')** `Field` If the client is logged in or not
   - **[Processor](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Processor 'SHTCGClient\.ClientService\.Processor')** `Field`
   - **[Seasons](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Seasons 'SHTCGClient\.ClientService\.Seasons')** `Field` Season information, deck management, etc\.
+  - **[Trades](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Trades 'SHTCGClient\.ClientService\.Trades')** `Field` Player card and money trading
   - **[Users](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Users 'SHTCGClient\.ClientService\.Users')** `Field` Socials, net worth leaderboard, etc\.
   - **[Vendors](SHTCGClient.ClientService.md#SHTCGClient.ClientService.Vendors 'SHTCGClient\.ClientService\.Vendors')** `Field` Buy and sell cards/companions\.
   - **[DisposeAsync\(\)](SHTCGClient.ClientService.md#SHTCGClient.ClientService.DisposeAsync() 'SHTCGClient\.ClientService\.DisposeAsync\(\)')** `Method` Async disposal\. Put the ClientService in an "await using" block for this to automatically clean up\.
@@ -56,6 +57,7 @@
   - **[BaseCards\(\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.BaseCards() 'SHTCGClient\.Endpoints\.CardsEndpoints\.BaseCards\(\)')** `Method` Get all the base versions of the cards in the game\.
   - **[MyCards\(\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.MyCards() 'SHTCGClient\.Endpoints\.CardsEndpoints\.MyCards\(\)')** `Method` Get the User's owned cards\. \(This automatically de\-paginates the request and gets all cards\.\)
   - **[PlayerCards\(int\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.PlayerCards(int) 'SHTCGClient\.Endpoints\.CardsEndpoints\.PlayerCards\(int\)')** `Method` Get a player's owned cards\. \(This automatically de\-paginates the request and gets all cards\.\)
+  - **[Refill\(\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.Refill() 'SHTCGClient\.Endpoints\.CardsEndpoints\.Refill\(\)')** `Method` Refill the user's rolls
   - **[Roll\(\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.Roll() 'SHTCGClient\.Endpoints\.CardsEndpoints\.Roll\(\)')** `Method` Roll for a card
   - **[RollHistory\(int\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.RollHistory(int) 'SHTCGClient\.Endpoints\.CardsEndpoints\.RollHistory\(int\)')** `Method` Get the last x rolls
   - **[Status\(\)](SHTCGClient.Endpoints.CardsEndpoints.md#SHTCGClient.Endpoints.CardsEndpoints.Status() 'SHTCGClient\.Endpoints\.CardsEndpoints\.Status\(\)')** `Method` Get the current roll status
@@ -77,6 +79,7 @@
   - **[ExchangeEndpoints\(ClientService\)](SHTCGClient.Endpoints.ExchangeEndpoints.md#SHTCGClient.Endpoints.ExchangeEndpoints.ExchangeEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.ExchangeEndpoints\.ExchangeEndpoints\(SHTCGClient\.ClientService\)')** `Constructor`
   - **[Candles\(int, int, int\)](SHTCGClient.Endpoints.ExchangeEndpoints.md#SHTCGClient.Endpoints.ExchangeEndpoints.Candles(int,int,int) 'SHTCGClient\.Endpoints\.ExchangeEndpoints\.Candles\(int, int, int\)')** `Method` Get the candle graph for an exchange
   - **[Exchanges\(\)](SHTCGClient.Endpoints.ExchangeEndpoints.md#SHTCGClient.Endpoints.ExchangeEndpoints.Exchanges() 'SHTCGClient\.Endpoints\.ExchangeEndpoints\.Exchanges\(\)')** `Method` Get the currently running exchanges
+  - **[GetTrades\(int, int\)](SHTCGClient.Endpoints.ExchangeEndpoints.md#SHTCGClient.Endpoints.ExchangeEndpoints.GetTrades(int,int) 'SHTCGClient\.Endpoints\.ExchangeEndpoints\.GetTrades\(int, int\)')** `Method` Fetch the trades for a given exchange
   - **[Positions\(\)](SHTCGClient.Endpoints.ExchangeEndpoints.md#SHTCGClient.Endpoints.ExchangeEndpoints.Positions() 'SHTCGClient\.Endpoints\.ExchangeEndpoints\.Positions\(\)')** `Method` Get the user's positions in the exchanges
 - **[FeaturesEndpoints](SHTCGClient.Endpoints.FeaturesEndpoints.md 'SHTCGClient\.Endpoints\.FeaturesEndpoints')** `Class` Class for interacting with the features endpoint
   - **[FeaturesEndpoints\(ClientService\)](SHTCGClient.Endpoints.FeaturesEndpoints.md#SHTCGClient.Endpoints.FeaturesEndpoints.FeaturesEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.FeaturesEndpoints\.FeaturesEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the features endpoint
@@ -87,6 +90,11 @@
   - **[Decks](SHTCGClient.Endpoints.SeasonsEndpoints.md#SHTCGClient.Endpoints.SeasonsEndpoints.Decks 'SHTCGClient\.Endpoints\.SeasonsEndpoints\.Decks')** `Field` The seasons/decks endpoint
   - **[ById\(int\)](SHTCGClient.Endpoints.SeasonsEndpoints.md#SHTCGClient.Endpoints.SeasonsEndpoints.ById(int) 'SHTCGClient\.Endpoints\.SeasonsEndpoints\.ById\(int\)')** `Method` Get season by id
   - **[Current\(\)](SHTCGClient.Endpoints.SeasonsEndpoints.md#SHTCGClient.Endpoints.SeasonsEndpoints.Current() 'SHTCGClient\.Endpoints\.SeasonsEndpoints\.Current\(\)')** `Method` Get the currently active season
+  - **[LowestDropChance\(\)](SHTCGClient.Endpoints.SeasonsEndpoints.md#SHTCGClient.Endpoints.SeasonsEndpoints.LowestDropChance() 'SHTCGClient\.Endpoints\.SeasonsEndpoints\.LowestDropChance\(\)')** `Method` Gets the Lowest Drop Chance \(GTO\) cards for the current season\.
+- **[TradesEndpoints](SHTCGClient.Endpoints.TradesEndpoints.md 'SHTCGClient\.Endpoints\.TradesEndpoints')** `Class`
+  - **[TradesEndpoints\(ClientService\)](SHTCGClient.Endpoints.TradesEndpoints.md#SHTCGClient.Endpoints.TradesEndpoints.TradesEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.TradesEndpoints\.TradesEndpoints\(SHTCGClient\.ClientService\)')** `Constructor`
+  - **[GetTrade\(int\)](SHTCGClient.Endpoints.TradesEndpoints.md#SHTCGClient.Endpoints.TradesEndpoints.GetTrade(int) 'SHTCGClient\.Endpoints\.TradesEndpoints\.GetTrade\(int\)')** `Method`
+  - **[MyTrades\(\)](SHTCGClient.Endpoints.TradesEndpoints.md#SHTCGClient.Endpoints.TradesEndpoints.MyTrades() 'SHTCGClient\.Endpoints\.TradesEndpoints\.MyTrades\(\)')** `Method`
 - **[UsersEndpoints](SHTCGClient.Endpoints.UsersEndpoints.md 'SHTCGClient\.Endpoints\.UsersEndpoints')** `Class` Class for interacting with the users endpoint
   - **[UsersEndpoints\(ClientService\)](SHTCGClient.Endpoints.UsersEndpoints.md#SHTCGClient.Endpoints.UsersEndpoints.UsersEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.UsersEndpoints\.UsersEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the users endpoint
   - **[Friends\(\)](SHTCGClient.Endpoints.UsersEndpoints.md#SHTCGClient.Endpoints.UsersEndpoints.Friends() 'SHTCGClient\.Endpoints\.UsersEndpoints\.Friends\(\)')** `Method` Get your friends
@@ -95,8 +103,17 @@
 - **[VendorsEndpoints](SHTCGClient.Endpoints.VendorsEndpoints.md 'SHTCGClient\.Endpoints\.VendorsEndpoints')** `Class` Class for interacting with the vendors endpoint\.
   - **[VendorsEndpoints\(ClientService\)](SHTCGClient.Endpoints.VendorsEndpoints.md#SHTCGClient.Endpoints.VendorsEndpoints.VendorsEndpoints(SHTCGClient.ClientService) 'SHTCGClient\.Endpoints\.VendorsEndpoints\.VendorsEndpoints\(SHTCGClient\.ClientService\)')** `Constructor` Class for interacting with the vendors endpoint\.
   - **[GetVendors\(\)](SHTCGClient.Endpoints.VendorsEndpoints.md#SHTCGClient.Endpoints.VendorsEndpoints.GetVendors() 'SHTCGClient\.Endpoints\.VendorsEndpoints\.GetVendors\(\)')** `Method` Get the current vendors
+  - **[Grade\(int\)](SHTCGClient.Endpoints.VendorsEndpoints.md#SHTCGClient.Endpoints.VendorsEndpoints.Grade(int) 'SHTCGClient\.Endpoints\.VendorsEndpoints\.Grade\(int\)')** `Method`
   - **[SellCard\(int, int\)](SHTCGClient.Endpoints.VendorsEndpoints.md#SHTCGClient.Endpoints.VendorsEndpoints.SellCard(int,int) 'SHTCGClient\.Endpoints\.VendorsEndpoints\.SellCard\(int, int\)')** `Method` Sell a card
   - **[SellCards\(int\[\], int\)](SHTCGClient.Endpoints.VendorsEndpoints.md#SHTCGClient.Endpoints.VendorsEndpoints.SellCards(int[],int) 'SHTCGClient\.Endpoints\.VendorsEndpoints\.SellCards\(int\[\], int\)')** `Method` Sell cards
+
+<a name='SHTCGClient.Extensions'></a>
+
+## SHTCGClient\.Extensions Namespace
+- **[CardExtensions](SHTCGClient.Extensions.CardExtensions.md 'SHTCGClient\.Extensions\.CardExtensions')** `Class`
+  - **[Sell\(ClientService\)](SHTCGClient.Extensions.CardExtensions.md#SHTCGClient.Extensions.CardExtensions.Sell(SHTCGClient.ClientService) 'SHTCGClient\.Extensions\.CardExtensions\.Sell\(SHTCGClient\.ClientService\)')** `Method` Helper method for selling an array of cards\. Provides more information than just providing an array of IDs to the API\.
+- **[CardExtensions\.&lt;G&gt;$E1A8686BDBC27EBE9DB149040FA32F64](SHTCGClient.Extensions.CardExtensions._G_$E1A8686BDBC27EBE9DB149040FA32F64.md 'SHTCGClient\.Extensions\.CardExtensions\.\<G\>$E1A8686BDBC27EBE9DB149040FA32F64')** `Class`
+- **[CardExtensions\.&lt;G&gt;$E1A8686BDBC27EBE9DB149040FA32F64\.&lt;M&gt;$6D65B699A70CA7D7CA2F9D2A93F81349](SHTCGClient.Extensions.CardExtensions._G_$E1A8686BDBC27EBE9DB149040FA32F64._M_$6D65B699A70CA7D7CA2F9D2A93F81349.md 'SHTCGClient\.Extensions\.CardExtensions\.\<G\>$E1A8686BDBC27EBE9DB149040FA32F64\.\<M\>$6D65B699A70CA7D7CA2F9D2A93F81349')** `Class`
 
 <a name='SHTCGClient.Models'></a>
 
@@ -187,6 +204,11 @@
   - **[Card](SHTCGClient.Models.Cards.CardRollResponse.md#SHTCGClient.Models.Cards.CardRollResponse.Card 'SHTCGClient\.Models\.Cards\.CardRollResponse\.Card')** `Property`
   - **[Rarity](SHTCGClient.Models.Cards.CardRollResponse.md#SHTCGClient.Models.Cards.CardRollResponse.Rarity 'SHTCGClient\.Models\.Cards\.CardRollResponse\.Rarity')** `Property`
   - **[RollInfo](SHTCGClient.Models.Cards.CardRollResponse.md#SHTCGClient.Models.Cards.CardRollResponse.RollInfo 'SHTCGClient\.Models\.Cards\.CardRollResponse\.RollInfo')** `Property`
+- **[RefillResponse](SHTCGClient.Models.Cards.RefillResponse.md 'SHTCGClient\.Models\.Cards\.RefillResponse')** `Class`
+  - **[Cost](SHTCGClient.Models.Cards.RefillResponse.md#SHTCGClient.Models.Cards.RefillResponse.Cost 'SHTCGClient\.Models\.Cards\.RefillResponse\.Cost')** `Property`
+  - **[Message](SHTCGClient.Models.Cards.RefillResponse.md#SHTCGClient.Models.Cards.RefillResponse.Message 'SHTCGClient\.Models\.Cards\.RefillResponse\.Message')** `Property`
+  - **[NetWorth](SHTCGClient.Models.Cards.RefillResponse.md#SHTCGClient.Models.Cards.RefillResponse.NetWorth 'SHTCGClient\.Models\.Cards\.RefillResponse\.NetWorth')** `Property`
+  - **[RollInfo](SHTCGClient.Models.Cards.RefillResponse.md#SHTCGClient.Models.Cards.RefillResponse.RollInfo 'SHTCGClient\.Models\.Cards\.RefillResponse\.RollInfo')** `Property`
 - **[RollInfo](SHTCGClient.Models.Cards.RollInfo.md 'SHTCGClient\.Models\.Cards\.RollInfo')** `Class` Status information for user's accumulated rolls, max rolls, etc\.
   - **[HoursUntilNextRoll](SHTCGClient.Models.Cards.RollInfo.md#SHTCGClient.Models.Cards.RollInfo.HoursUntilNextRoll 'SHTCGClient\.Models\.Cards\.RollInfo\.HoursUntilNextRoll')** `Property`
   - **[MaxRolls](SHTCGClient.Models.Cards.RollInfo.md#SHTCGClient.Models.Cards.RollInfo.MaxRolls 'SHTCGClient\.Models\.Cards\.RollInfo\.MaxRolls')** `Property`
@@ -262,6 +284,12 @@
   - **[BaseCardName](SHTCGClient.Models.Exchange.Symbol.md#SHTCGClient.Models.Exchange.Symbol.BaseCardName 'SHTCGClient\.Models\.Exchange\.Symbol\.BaseCardName')** `Property`
   - **[Id](SHTCGClient.Models.Exchange.Symbol.md#SHTCGClient.Models.Exchange.Symbol.Id 'SHTCGClient\.Models\.Exchange\.Symbol\.Id')** `Property`
   - **[Name](SHTCGClient.Models.Exchange.Symbol.md#SHTCGClient.Models.Exchange.Symbol.Name 'SHTCGClient\.Models\.Exchange\.Symbol\.Name')** `Property`
+- **[Trade](SHTCGClient.Models.Exchange.Trade.md 'SHTCGClient\.Models\.Exchange\.Trade')** `Class`
+  - **[ExecutedAt](SHTCGClient.Models.Exchange.Trade.md#SHTCGClient.Models.Exchange.Trade.ExecutedAt 'SHTCGClient\.Models\.Exchange\.Trade\.ExecutedAt')** `Property`
+  - **[Id](SHTCGClient.Models.Exchange.Trade.md#SHTCGClient.Models.Exchange.Trade.Id 'SHTCGClient\.Models\.Exchange\.Trade\.Id')** `Property`
+  - **[IsSimulated](SHTCGClient.Models.Exchange.Trade.md#SHTCGClient.Models.Exchange.Trade.IsSimulated 'SHTCGClient\.Models\.Exchange\.Trade\.IsSimulated')** `Property`
+  - **[Price](SHTCGClient.Models.Exchange.Trade.md#SHTCGClient.Models.Exchange.Trade.Price 'SHTCGClient\.Models\.Exchange\.Trade\.Price')** `Property`
+  - **[Quantity](SHTCGClient.Models.Exchange.Trade.md#SHTCGClient.Models.Exchange.Trade.Quantity 'SHTCGClient\.Models\.Exchange\.Trade\.Quantity')** `Property`
 
 <a name='SHTCGClient.Models.Features'></a>
 
@@ -314,6 +342,26 @@
   - **[Equals\(object\)](SHTCGClient.Models.Seasons.Season.md#SHTCGClient.Models.Seasons.Season.Equals(object) 'SHTCGClient\.Models\.Seasons\.Season\.Equals\(object\)')** `Method`
   - **[Equals\(Season\)](SHTCGClient.Models.Seasons.Season.md#SHTCGClient.Models.Seasons.Season.Equals(SHTCGClient.Models.Seasons.Season) 'SHTCGClient\.Models\.Seasons\.Season\.Equals\(SHTCGClient\.Models\.Seasons\.Season\)')** `Method`
   - **[GetHashCode\(\)](SHTCGClient.Models.Seasons.Season.md#SHTCGClient.Models.Seasons.Season.GetHashCode() 'SHTCGClient\.Models\.Seasons\.Season\.GetHashCode\(\)')** `Method`
+
+<a name='SHTCGClient.Models.Trades'></a>
+
+## SHTCGClient\.Models\.Trades Namespace
+- **[Trade](SHTCGClient.Models.Trades.Trade.md 'SHTCGClient\.Models\.Trades\.Trade')** `Class`
+  - **[CreatedAt](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.CreatedAt 'SHTCGClient\.Models\.Trades\.Trade\.CreatedAt')** `Property`
+  - **[Id](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.Id 'SHTCGClient\.Models\.Trades\.Trade\.Id')** `Property`
+  - **[Initiator](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.Initiator 'SHTCGClient\.Models\.Trades\.Trade\.Initiator')** `Property`
+  - **[InitiatorCards](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.InitiatorCards 'SHTCGClient\.Models\.Trades\.Trade\.InitiatorCards')** `Property`
+  - **[InitiatorMoney](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.InitiatorMoney 'SHTCGClient\.Models\.Trades\.Trade\.InitiatorMoney')** `Property`
+  - **[Message](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.Message 'SHTCGClient\.Models\.Trades\.Trade\.Message')** `Property`
+  - **[Receiver](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.Receiver 'SHTCGClient\.Models\.Trades\.Trade\.Receiver')** `Property`
+  - **[ReceiverCards](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.ReceiverCards 'SHTCGClient\.Models\.Trades\.Trade\.ReceiverCards')** `Property`
+  - **[ReceiverMoney](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.ReceiverMoney 'SHTCGClient\.Models\.Trades\.Trade\.ReceiverMoney')** `Property`
+  - **[ResolvedAt](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.ResolvedAt 'SHTCGClient\.Models\.Trades\.Trade\.ResolvedAt')** `Property`
+  - **[Status](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.Status 'SHTCGClient\.Models\.Trades\.Trade\.Status')** `Property`
+  - **[UpdatedAt](SHTCGClient.Models.Trades.Trade.md#SHTCGClient.Models.Trades.Trade.UpdatedAt 'SHTCGClient\.Models\.Trades\.Trade\.UpdatedAt')** `Property`
+- **[TradeParticipant](SHTCGClient.Models.Trades.TradeParticipant.md 'SHTCGClient\.Models\.Trades\.TradeParticipant')** `Class`
+  - **[Id](SHTCGClient.Models.Trades.TradeParticipant.md#SHTCGClient.Models.Trades.TradeParticipant.Id 'SHTCGClient\.Models\.Trades\.TradeParticipant\.Id')** `Property`
+  - **[Username](SHTCGClient.Models.Trades.TradeParticipant.md#SHTCGClient.Models.Trades.TradeParticipant.Username 'SHTCGClient\.Models\.Trades\.TradeParticipant\.Username')** `Property`
 
 <a name='SHTCGClient.Models.Users'></a>
 
@@ -371,6 +419,11 @@
   - **[Message](SHTCGClient.Models.Vendors.CardSellResponse.md#SHTCGClient.Models.Vendors.CardSellResponse.Message 'SHTCGClient\.Models\.Vendors\.CardSellResponse\.Message')** `Property`
   - **[NetWorth](SHTCGClient.Models.Vendors.CardSellResponse.md#SHTCGClient.Models.Vendors.CardSellResponse.NetWorth 'SHTCGClient\.Models\.Vendors\.CardSellResponse\.NetWorth')** `Property`
   - **[TotalValue](SHTCGClient.Models.Vendors.CardSellResponse.md#SHTCGClient.Models.Vendors.CardSellResponse.TotalValue 'SHTCGClient\.Models\.Vendors\.CardSellResponse\.TotalValue')** `Property`
+- **[GradeResponse](SHTCGClient.Models.Vendors.GradeResponse.md 'SHTCGClient\.Models\.Vendors\.GradeResponse')** `Class` Response for grading a card
+  - **[CardId](SHTCGClient.Models.Vendors.GradeResponse.md#SHTCGClient.Models.Vendors.GradeResponse.CardId 'SHTCGClient\.Models\.Vendors\.GradeResponse\.CardId')** `Property`
+  - **[EstimatedValue](SHTCGClient.Models.Vendors.GradeResponse.md#SHTCGClient.Models.Vendors.GradeResponse.EstimatedValue 'SHTCGClient\.Models\.Vendors\.GradeResponse\.EstimatedValue')** `Property`
+  - **[Grade](SHTCGClient.Models.Vendors.GradeResponse.md#SHTCGClient.Models.Vendors.GradeResponse.Grade 'SHTCGClient\.Models\.Vendors\.GradeResponse\.Grade')** `Property`
+  - **[Message](SHTCGClient.Models.Vendors.GradeResponse.md#SHTCGClient.Models.Vendors.GradeResponse.Message 'SHTCGClient\.Models\.Vendors\.GradeResponse\.Message')** `Property`
 - **[Vendor](SHTCGClient.Models.Vendors.Vendor.md 'SHTCGClient\.Models\.Vendors\.Vendor')** `Class` Shop NPC information\.
   - **[Avatar](SHTCGClient.Models.Vendors.Vendor.md#SHTCGClient.Models.Vendors.Vendor.Avatar 'SHTCGClient\.Models\.Vendors\.Vendor\.Avatar')** `Property`
   - **[AvatarSmall](SHTCGClient.Models.Vendors.Vendor.md#SHTCGClient.Models.Vendors.Vendor.AvatarSmall 'SHTCGClient\.Models\.Vendors\.Vendor\.AvatarSmall')** `Property`
